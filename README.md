@@ -1,81 +1,89 @@
-# OpenObject
 <div align="center">   
-  
-# BEVFormer: a Cutting-edge Baseline for Camera-based Detection
+
+<!-- omit in toc -->
+# OpenObject
 </div>
 
+We believe **Occupancy** serves as a `general` representation of the scene and could facilitate perception and planning in the full-stack of autonomous driving. 
 
-https://user-images.githubusercontent.com/27915819/161392594-fc0082f7-5c37-4919-830a-2dd423c1d025.mp4
-
-> **BEVFormer: Learning Bird's-Eye-View Representation from Multi-Camera Images via Spatiotemporal Transformers**
-> - [Paper](http://arxiv.org/abs/2203.17270) | [Blog](https://www.zhihu.com/question/521842610/answer/2431585901) (in Chinese) | Presentation Slides at CVPR 2022 Workshop (soon) | Live-streaming video on BEV Perception (soon)
+https://github.com/OpenDriveLab/OccNet/assets/54334254/92fb43a0-0ee8-4eab-aa53-0984506f0ec3
 
 
 
-# News
-- [2022/6/16]: We added two BEVformer configurations, which require less GPU memory than the base version. Please pull this repo to obtain the latest codes.
-- [2022/6/13]: We release an initial version of BEVFormer. It achieves a baseline result of **51.7%** NDS on nuScenes.
-- [2022/5/23]: 🚀🚀Built on top of BEVFormer, **BEVFormer++**, gathering up all best practices in recent SOTAs and our unique modification,  ranks **1st** on [Waymo Open Datast 3D Camera-Only Detection Challenge](https://waymo.com/open/challenges/2022/3d-camera-only-detection/). We will present BEVFormer++ on CVPR 2022 Autonomous Driving [Workshop](https://cvpr2022.wad.vision/).
-- [2022/3/10]: 🚀BEVFormer achieve the SOTA on [nuScenes Detection Task](https://nuscenes.org/object-detection?externalData=all&mapData=all&modalities=Camera) with **56.9% NDS** (camera-only)!
-</br>
+> **Scene as Occupancy**
+> - [Paper in arXiv](https://arxiv.org/abs/2306.02851) | [CVPR 2023 AD Challenge Occupancy Track](https://github.com/CVPR2023-3D-Occupancy-Prediction/CVPR2023-3D-Occupancy-Prediction)
+> - Point of contact: [simachonghao@pjlab.org.cn](mailto:simachonghao@pjlab.org.cn)
+
+<!-- omit in toc -->
+## 3D Occupancy Prediction Leaderboard
+We provide a full-scale [3D occupancy leaderboard](https://opendrivelab.com/AD23Challenge.html#Track3) based on the CVPR 2023 Autonomous Driving challenge. Top entries (by 06-09-2023) are provided below. Check the website out!
+
+![teaser](assets/figs/20230609-212807.jpg)
 
 
-# Abstract
-In this work, the authors present a new framework termed BEVFormer, which learns unified BEV representations with spatiotemporal transformers to support multiple autonomous driving perception tasks. In a nutshell, BEVFormer exploits both spatial and temporal information by interacting with spatial and temporal space through predefined grid-shaped BEV queries. To aggregate spatial information, the authors design a spatial cross-attention that each BEV query extracts the spatial features from the regions of interest across camera views. For temporal information, the authors propose a temporal self-attention to recurrently fuse the history BEV information.
-The proposed approach achieves the new state-of-the-art **56.9\%** in terms of NDS metric on the nuScenes test set, which is **9.0** points higher than previous best arts and on par with the performance of LiDAR-based baselines.
+<!-- omit in toc -->
+## Table of Contents
+- [Highlights](#highlights)
+- [News](#news)
+- [Getting Started](#getting-started)
+  - [Results and Pre-trained Models](#results-and-pre-trained-models)
+- [TODO List](#todo-list)
+- [License \& Citation](#license--citation)
+- [Challenge](#challenge)
+- [Related resources](#related-resources)
+
+## Highlights
+
+![teaser](assets/figs/pipeline.PNG)
+- :oncoming_automobile: **General Representation in Perception**: 3D Occupancy is a geometry-aware representation of the scene. Compared to the form of 3D bounding box & BEV segmentation,  3D occupancy could capture the fine-grained details of critical obstacles in the scene.
+- :trophy: **Exploration in full-stack Autonomous Driving**: OccNet, as a strong descriptor of the scene, could facilitate subsequent tasks such as perception and planning, achieving results on par with LiDAR-based methods (41.08 on mIOU in 3D occupancy, 60.46 on mIOU in LiDAR segmentation, 0.703 avg.Col in motion planning).
+
+## News
+- [2023/06/06] [Paper](https://arxiv.org/abs/2306.02851) released on arxiv
+- [2023/06/04] Code & model initial release `v1.0`
+- [2023/06/04] 3D Occupancy and flow dataset release `v1.0`
+- [2023/06/01] [CVPR AD Challenge 3D Occupancy Track](https://opendrivelab.com/AD23Challenge.html#Track3) close
+- [2023/03/01] [CVPR AD Challenge 3D Occupancy Track](https://opendrivelab.com/AD23Challenge.html#Track3) launch
+
+## Getting Started
+- [Install](docs/install.md)
+- [Prepare dataset](docs/prepare_dataset.md)
+- [Visualization](docs/visualization.md)
+- [Run the code](docs/run.md)
+
+### Results and Pre-trained Models
+We will release pre-trained weight soon.
+
+![teaser](assets/figs/TABLE.png)
 
 
-# Methods
-![method](figs/arch.png "model arch")
+## TODO List
+- [x] 3D Occupancy and flow dataset `v1.0`
+- [x] 3D Occupancy Prediction code `v1.0`
+- [ ] Pre-trained Models
+- [ ] Occupancy label generation code
+- [ ] GT label with more voxel size
+- [ ] Compatibility with other BEV encoders
 
+## License & Citation
+All assets (including figures and data) and code are under the [Apache 2.0 license](./LICENSE) unless specified otherwise.
 
-# Getting Started
-- [Installation](docs/install.md) 
-- [Prepare Dataset](docs/prepare_dataset.md)
-- [Run and Eval](docs/getting_started.md)
-
-# Model Zoo
-
-| Backbone | Method | Lr Schd | NDS| mAP|memroy | Config | Download |
-| :---: | :---: | :---: | :---: | :---:|:---:| :---: | :---: |
-| R50 | BEVFormer-tiny_fp16 | 24ep | 35.9|25.7 | - |[config](projects/configs/bevformer_fp16/bevformer_tiny_fp16.py) |[model](https://github.com/zhiqi-li/storage/releases/download/v1.0/bevformer_tiny_fp16_epoch_24.pth)/[log](https://github.com/zhiqi-li/storage/releases/download/v1.0/bevformer_tiny_fp16_epoch_24.log) |
-| R50 | BEVFormer-tiny | 24ep | 35.4|25.2 | 6500M |[config](projects/configs/bevformer/bevformer_tiny.py) |[model](https://github.com/zhiqi-li/storage/releases/download/v1.0/bevformer_tiny_epoch_24.pth)/[log](https://github.com/zhiqi-li/storage/releases/download/v1.0/bevformer_tiny_epoch_24.log) |
-| [R101-DCN](https://github.com/zhiqi-li/storage/releases/download/v1.0/r101_dcn_fcos3d_pretrain.pth)  | BEVFormer-small | 24ep | 47.9|37.0 | 10500M |[config](projects/configs/bevformer/bevformer_small.py) |[model](https://github.com/zhiqi-li/storage/releases/download/v1.0/bevformer_small_epoch_24.pth)/[log](https://github.com/zhiqi-li/storage/releases/download/v1.0/bevformer_small_epoch_24.log) |
-| [R101-DCN](https://github.com/zhiqi-li/storage/releases/download/v1.0/r101_dcn_fcos3d_pretrain.pth)  | BEVFormer-base | 24ep | 51.7|41.6 |28500M |[config](projects/configs/bevformer/bevformer_base.py) | [model](https://github.com/zhiqi-li/storage/releases/download/v1.0/bevformer_r101_dcn_24ep.pth)/[log](https://github.com/zhiqi-li/storage/releases/download/v1.0/bevformer_r101_dcn_24ep.log) |
-
-
-# Catalog
-
-- [ ] BEV Segmentation checkpoints
-- [ ] BEV Segmentation code
-- [x] 3D Detection checkpoints
-- [x] 3D Detection code
-- [x] Initialization
-
-
-# Bibtex
-If this work is helpful for your research, please consider citing the following BibTeX entry.
-
-```
-@article{li2022bevformer,
-  title={BEVFormer: Learning Bird’s-Eye-View Representation from Multi-Camera Images via Spatiotemporal Transformers},
-  author={Li, Zhiqi and Wang, Wenhai and Li, Hongyang and Xie, Enze and Sima, Chonghao and Lu, Tong and Qiao, Yu and Dai, Jifeng}
-  journal={arXiv preprint arXiv:2203.17270},
-  year={2022}
+Please consider citing our paper if the project helps your research with the following BibTex:
+```bibtex
+@article{sima2023_occnet,
+      title={Scene as Occupancy}, 
+      author={Chonghao Sima and Wenwen Tong and Tai Wang and Li Chen and Silei Wu and Hanming Deng  and Yi Gu and Lewei Lu and Ping Luo and Dahua Lin and Hongyang Li},
+      year={2023},
+      eprint={2306.02851},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
 }
 ```
 
-# Acknowledgement
+## Challenge
+We host the first 3D occupancy prediciton challenge on CVPR 2023 End-to-end Autonomous Driving Workshop. For more information about the challenge, please refer to [here](https://github.com/CVPR2023-3D-Occupancy-Prediction/CVPR2023-3D-Occupancy-Prediction).
 
-Many thanks to these excellent open source projects:
-- [detr3d](https://github.com/WangYueFt/detr3d) 
-- [mmdet3d](https://github.com/open-mmlab/mmdetection3d)
-
-
-### &#8627; Stargazers
-[![Stargazers repo roster for @nastyox/Repo-Roster](https://reporoster.com/stars/zhiqi-li/BEVFormer)](https://github.com/zhiqi-li/BEVFormer/stargazers)
-
-### &#8627; Forkers
-[![Forkers repo roster for @nastyox/Repo-Roster](https://reporoster.com/forks/zhiqi-li/BEVFormer)](https://github.com/zhiqi-li/BEVFormer/network/members)
-
-
+## Related resources
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+- [BEVFormer](https://github.com/fundamentalvision/BEVFormer)
+- [BEV Perception Survey & Recipe](https://github.com/OpenDriveLab/BEVPerception-Survey-Recipe)

@@ -4,7 +4,7 @@
 **全球首个海量自动驾驶占用栅格感知和预测基准**
 
 <a href="#数据">
-  <img alt="OpenObject-v1: v1.0" src="https://img.shields.io/badge/OpenLane--V2-v1.0-blueviolet"/>
+  <img alt="OpenObject-v1: v1.0" src="https://img.shields.io/badge/OpenObject--V1-v1.0-blueviolet"/>
 </a>
 <a href="#开发工具">
   <img alt="devkit: v0.1.0" src="https://img.shields.io/badge/devkit-v0.1.0-blueviolet"/>

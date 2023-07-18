@@ -1,7 +1,8 @@
 <div id="top" align="center">
 
 # OpenObject-nuPlan
-**全球首个海量自动驾驶占用栅格感知和预测基准**
+<!-- **全球最大的自动驾驶占用栅格感知和预测基准数据集** -->
+**The World's Largest Up-to-Date 3D Occupancy Forecasting Dataset in Autonomous Driving.**
 
 <a href="#数据">
   <img alt="OpenObject-v1: v1.0" src="https://img.shields.io/badge/OpenObject--V1-v1.0-blueviolet"/>
@@ -37,14 +38,39 @@
 - [引用](#引用)
 - [许可说明](#许可说明)
 
-## 特色 - 我们为什么是独一无二的？
-### 三维场景，3D车道
+## Highlight - Why Are We Exclusive?
+
+
+### Represent 3D Scenes as Occupancy: A Generic Approach
+
+
+![teaser](assets/figs/pipeline.PNG)
+:oncoming_automobile: We believe **Occupancy** serves as a `general` representation of the scene and could facilitate perception and planning in the full-stack of autonomous driving. 
+3D Occupancy is a geometry-aware representation of the scene. Compared to the form of 3D bounding box & BEV segmentation,  3D occupancy could capture the fine-grained details of critical obstacles in the scene.
+
+
+### Scale Up Your Data: A Massive Dataset for Visual Pre-Training
+
+Experience from the sunny day does not apply to the dancing snowflakes. For machine learning, data is the must-have food. 
+We provide over **170 hours** of occupancy labels collected in various cities, from Austin to Singapore and from Boston to Miami. 
+The diversity of data enables models to generalize in different atmospheres and landscapes.
+
+
+
+### Beyond Perception: Empowering DriveAGI with Occupancy Forecasting
+
+
+### Explore the World Fully: Recognizing Scenarios with Semantic Labels
+
+
 
 道路环境需要怎样的建模才能满足车辆自动驾驶功能的需求？
 
 以往的数据集一般都在2D图像上标注车道，但在实际应用中，由于缺乏高度信息，2D车道数据无法支持车辆在上下坡、路面不平整等场景行驶，因此**3D车道**数据是不可或缺的。
 
 同我们之前的工作 [OpenLane](https://github.com/OpenDriveLab/OpenLane) 一致，OpenLane-Huawei 提供三维车道标注。
+
+<!--
 ### 关注交通要素，确保行车规范
 在道路上平稳的行驶只是第一步，驾驶汽车还需要遵循环境中的**交通要素**（交通灯，路标）信息指示，确保不违反当地交通法规，因此 OpenLane-Huawei 也提供了2D交通要素标注。
 
@@ -57,13 +83,35 @@ OpenLane-Huawei 提供车道与车道、车道与交通要素之间的拓扑关�
 
 自动驾驶汽车需要通过**推理**捕捉正确的**拓扑关系**以正确的方式行驶。
 我们希望这个数据集的建立可以促进**道路场景感知和推理**任务的发展。
+-->
 
-### 多元大规模数据，搭建超赞数据集
+### 多元大规模数据，搭建海量数据集
 对于机器学习任务，数据是必备的基石。
 我们提供从奥斯汀到新加坡，从波士顿到迈阿密等各个城市收集的数据的标注，
 支撑数据的**多元性**。
 
+
+
+### 助力构建端到端决策
+
+
+
 <p align="right">(<a href="#top">回到顶部</a>)</p>
+
+
+
+
+## OpenObject
+The Largest up-to-date **3D Occupancy Forecasting** dataset for visual pre-training.
+
+**Quick facts:**
+- Task: given the large amount of data, predict the 3D occupancy in the environment. 
+- Origin dataset: `nuPlan`
+- Estimated date of release: `Early August, 2023`
+- Repo: https://github.com/OpenDriveLab/OpenObject (TBA)
+- Related work: [OccNet](https://github.com/OpenDriveLab/OccNet), [3D Occupancy Prediction Challenge 2023](https://opendrivelab.com/AD23Challenge.html#Track3)
+
+
 
 
 ## 任务

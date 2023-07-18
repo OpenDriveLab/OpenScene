@@ -1,7 +1,7 @@
 <div align="center">   
 
 <!-- omit in toc -->
-# OpenObject
+# OpenScene
 </div>
 
 We believe **Occupancy** serves as a `general` representation of the scene and could facilitate perception and planning in the full-stack of autonomous driving. 

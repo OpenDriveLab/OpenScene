@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- name: "OpenScene Dataset Contributors"
+title: "OpenScene: The Largest Up-to-Date 3D Occupancy Prediction Benchmark in Autonomous Driving"
+date-released: 2023-08-04
+url: "https://github.com/OpenDriveLab/OpenScene"
+type: dataset
+license: Apache-2.0

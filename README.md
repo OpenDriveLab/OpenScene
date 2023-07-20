@@ -156,7 +156,7 @@ We will add semantic labels for background grids in future updates.
 
 </center>
 
-
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Tasks
 
@@ -188,7 +188,7 @@ We provide the full occupancy data of nuPlan, and participants are required to e
 - The use of additional data is not permitted.
 
 
-
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## News
 
@@ -200,13 +200,19 @@ We provide the full occupancy data of nuPlan, and participants are required to e
 - [ ] 3D Occupancy prediction code `v1.0`
 - [ ] Pre-trained models
 - [ ] Semantic labels
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ## Download
 
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ## Getting Started
 
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-## Citation
+
 
 ## License
 All assets (including figures and data) and code are under the [Apache 2.0 license](./LICENSE) unless specified otherwise.
@@ -223,6 +229,8 @@ Please consider citing our paper if the project helps your research with the fol
 }
 ```
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ## Related resources
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 - [BEVFormer](https://github.com/fundamentalvision/BEVFormer)
@@ -231,7 +239,7 @@ Please consider citing our paper if the project helps your research with the fol
 
 
 
-
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 

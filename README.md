@@ -95,7 +95,7 @@ The diversity of data enables models to generalize in different atmospheres and 
   
 |  Dataset  | Original Database |      Sensor Data (hr)    |   Sweeps  | Flow | Semantic Classes                               |
 |:---------:|:-----------------:|:--------------------:|:-------------:|:------:|:--------------------------------------------:|
-| MonoScene  |      NYUv2/SemanticKITTI     | 5.5  |  1 | ×    | 16   |
+| MonoScene  |      NYUv2/SemanticKITTI     | 5.5  |  1 | ×    | 19   |
 | [Occ3D](https://github.com/FANG-MING/occupancy-for-nuscenes/tree/main)   |      nuScenes     | 5.5  |  10 | ×    | 16  |
 | Occupancy-for-nuScenes   |      nuScenes     | 5.5  |  20 | ×    | 16  |
 | SurroundOcc   |      nuScenes     | 5.5  |  10 | ×    | 16  |

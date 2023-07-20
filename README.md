@@ -30,20 +30,20 @@
 > - Point of contact: [contact@opendrivelab.com](mailto:contact@opendrivelab.com)
 
 
-## News
+## Grad-and-Go
 
 - **`[07/21]`** OpenScene `v1.0` released
 
+
 ## Table of Contents
-- [Highlight](#Highlight)
-- [Tasks](#tasks)
-- [News](#news)
+- [Highlights](#Highlights)
+- [Task and Evaluation](#tasks)
 - [Getting Started](#getting-started)
 - [ToDo](#todo)
 - [License](#license)
 - [Related resources](#related-resources)
 
-## Features
+## Highlights
 
 
 ### Represent 3D Scenes as Occupancy: A Generic Approach
@@ -51,8 +51,11 @@
 <!---
 ![teaser](assets/figs/pipeline.PNG)
 --->
-:oncoming_automobile: We believe **Occupancy** serves as a `general` representation of the scene and could facilitate perception and planning in the full-stack of autonomous driving. 
-3D Occupancy is a geometry-aware representation of the scene. Compared to the form of 3D bounding box & BEV segmentation,  3D occupancy could capture the fine-grained details of critical obstacles in the scene.
+As we quote from the [OccNet]() work:
+
+> :oncoming_automobile: We believe **Occupancy** serves as a `general` representation of the scene and could facilitate perception and planning in the full-stack of autonomous driving. 3D Occupancy is a geometry-aware representation of the scene.
+
+Compared to the formulation of `3D bounding box` and `BEV segmentation`,  3D occupancy could capture the fine-grained details of critical obstacles in the driving scene.
 
 
 ### Scale Up Data: A Massive Dataset for Visual Pre-Training and [DriveAGI]()
@@ -155,7 +158,7 @@ We will add semantic labels for background grids in future updates.
 
 ## Task and Evaluation Metric
 
-
+TODO
 
 
 ## Ecosystem and Leaderboard
@@ -212,7 +215,6 @@ Tutorial
 
 ## License and Citation
 All assets (including figures and data) and code are under the [Apache 2.0 license](./LICENSE) unless specified otherwise.
-
 Please consider citing our paper if the project helps your research with the following BibTex:
 ```bibtex
 @article{sima2023_occnet,

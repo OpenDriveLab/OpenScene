@@ -1,9 +1,9 @@
+
 <div id="top" align="center">
 
-<!-- omit in toc -->
-# OpenScene-nuPlan
-<!-- **全球最大的自动驾驶占用栅格感知和预测基准数据集** -->
-**The World's Largest Up-to-Date 3D Occupancy Forecasting Dataset in Autonomous Driving.**
+# OpenScene
+
+**The Largest Up-to-Date 3D Occupancy Forecasting Benchmark in Autonomous Driving**
 
 <a href="#数据">
   <img alt="OpenScene-v1: v1.0" src="https://img.shields.io/badge/OpenScene--V1-v1.0-blueviolet"/>
@@ -15,25 +15,25 @@
   <img alt="License: Apache2.0" src="https://img.shields.io/badge/license-Apache%202.0-blue.svg"/>
 </a>
   
-<!--- **中文 | [English](./README-en-OpenScene-Dataset.md)** --->
 
 
 <p align="center">
   <img src="assets/videos/OpenScene_vis.gif" width="996px" >
 </p>
   
-<!--- [<img src="./imgs/poster.gif" width="696px">](https://github.com/OpenDriveLab/OccNet/assets/54334254/92fb43a0-0ee8-4eab-aa53-0984506f0ec3) --->
-
-
-
-
-> - [Paper in arXiv](https://arxiv.org/abs/2306.02851) | [CVPR 2023 AD Challenge Occupancy Track](https://github.com/CVPR2023-3D-Occupancy-Prediction/CVPR2023-3D-Occupancy-Prediction)
-> - Point of contact: [simachonghao@pjlab.org.cn](mailto:simachonghao@pjlab.org.cn)
-
 </div>
 
 
-<!-- omit in toc -->
+
+> - Medium Blog | Zhihu.com (in Chinese)
+> - [CVPR 2023 Autonomous Driving Challenge - Occupancy Track](https://github.com/CVPR2023-3D-Occupancy-Prediction/CVPR2023-3D-Occupancy-Prediction)
+> - Point of contact: [contact@opendrivelab.com](mailto:contact@opendrivelab.com)
+
+
+## News
+
+- **`[07/21]`** OpenScene `v1.0` released
+
 ## Table of Contents
 - [Highlight](#Highlight)
 - [Tasks](#tasks)
@@ -43,7 +43,7 @@
 - [License](#license)
 - [Related resources](#related-resources)
 
-## Highlight - Why Are We Exclusive?
+## Features
 
 
 ### Represent 3D Scenes as Occupancy: A Generic Approach
@@ -55,13 +55,8 @@
 3D Occupancy is a geometry-aware representation of the scene. Compared to the form of 3D bounding box & BEV segmentation,  3D occupancy could capture the fine-grained details of critical obstacles in the scene.
 
 
-### Scale Up Your Data: A Massive Dataset for Visual Pre-Training
+### Scale Up Data: A Massive Dataset for Visual Pre-Training and [DriveAGI]()
 
-
-
-<center>
-  
-**The Largest Dataset with 3D Annotations in Autonomous Driving**
 
 <!---
 |  Dataset  |      Raw Data      |   Annotation Duration  |Sensor Configuration| Annotation Label | 
@@ -80,7 +75,7 @@
 | Waymo   |             6.4  |  230k | 230k | 5 LiDARs, 5 cameras    | 3D box  |
 | nuScenes   |             5.5  |  390k | 40k  | 1 LiDARs, 6 cameras  | 3D box, LiDAR segmentation  |
 | ONCE   |            144  |  1M | 15k | 1 LiDARs, 7 cameras  | 3D box  |
-| ~~BDD100k~~   |            1000  |  100k | 100k| 1 camera  | 2D lane :cry:  |
+| BDD100k   |            1000  |  100k | 100k| 1 camera  | 2D lane :cry:  |
 | **OpenScene (nuPlan)** |          **:boom: 120**  |  **:boom: 4M** |  **:boom: 4M** | 5 LiDARs, 8 cameras  | Occupancy |
 
 </center>
@@ -138,7 +133,7 @@ We will add semantic labels for background grids in future updates.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-## Fact Sheet - OpenScene Dataset v1.0
+## Fact Sheet
 
 <center>
 
@@ -158,15 +153,20 @@ We will add semantic labels for background grids in future updates.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Tasks
+## Task and Evaluation Metric
 
 
-### Challenge 0 - CVPR 2023 3D Occupancy Prediction Challenge
+
+
+## Ecosystem and Leaderboard
+
+
+### CVPR 2023 3D Occupancy Prediction Challenge
 
 Given images from multiple cameras, the goal is to predict the current occupancy state and semantics of each voxel grid in the scene. The voxel state is predicted to be either free or occupied. If a voxel is occupied, its semantic class needs to be predicted, as well. Besides, we also provide a binary observed/unobserved mask for each frame. An observed voxel is defined as an invisible grid in the current camera observation, which is ignored in the evaluation stage.
 
 
-### Challenge 1 - Domain-Specific Fine-Tunning
+### Task 1 - Domain-Specific Fine-Tunning
 
 Given an occupancy detection network (OccNet) pre-trained on nuPlan, the goal is to fine-tune the network while freezing the backbone parameters, so that the model can adapt to domain shifts and perform as many downstream tasks as possible on the nuScenes dataset. The fine-tuning stage uses the nuScenes Trainval set as data and the downstream tasks include `occupancy detection, 3D detection, map segmentation, and object tracking`.
 
@@ -178,7 +178,7 @@ Given an occupancy detection network (OccNet) pre-trained on nuPlan, the goal is
 
 
 
-### Challenge 2 - Unified Large-Scale Pre-Training
+### Task 2 - Unified Large-Scale Pre-Training
 
 We provide the full occupancy data of nuPlan, and participants are required to explore a large-scale pre-training method that enables pre-trained models to perform well on various datasets and downstream tasks after fine-tuning on small-batch data. The sub-datasets include `nuScenes, Waymo, and KITTI`, and the sub-tasks include `occupancy detection, 3D detection, map segmentation, and object tracking`. We will make the required fine-tuning datasets publicly available, but the test datasets will not be disclosed.
 
@@ -190,12 +190,8 @@ We provide the full occupancy data of nuPlan, and participants are required to e
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## News
 
-- [2023/08]
-  * Dataset `v0.1`: Initial OpenScene-V1 dataset sample released.
-
-## Todo
+## TODO 
 - [x] 3D Occupancy and flow dataset `v1.0`
 - [ ] 3D Occupancy prediction code `v1.0`
 - [ ] Pre-trained models
@@ -203,18 +199,18 @@ We provide the full occupancy data of nuPlan, and participants are required to e
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Download
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Getting Started
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+Download Data
+
+Tutorial
 
 
-## License
+
+## License and Citation
 All assets (including figures and data) and code are under the [Apache 2.0 license](./LICENSE) unless specified otherwise.
 
 Please consider citing our paper if the project helps your research with the following BibTex:
@@ -234,9 +230,8 @@ Please consider citing our paper if the project helps your research with the fol
 ## Related resources
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 - [BEVFormer](https://github.com/fundamentalvision/BEVFormer)
-- [BEV Perception Survey & Recipe](https://github.com/OpenDriveLab/BEVPerception-Survey-Recipe)
-- [OccNet](https://github.com/OpenDriveLab/OccNet/tree/main)
-
+- [Bird's-eye-view Perception](https://github.com/OpenDriveLab/BEVPerception-Survey-Recipe)
+- [OccNet](https://github.com/OpenDriveLab/OccNet)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>

@@ -48,8 +48,9 @@
 
 ### Represent 3D Scenes as Occupancy: A Generic Approach
 
-
+<!---
 ![teaser](assets/figs/pipeline.PNG)
+--->
 :oncoming_automobile: We believe **Occupancy** serves as a `general` representation of the scene and could facilitate perception and planning in the full-stack of autonomous driving. 
 3D Occupancy is a geometry-aware representation of the scene. Compared to the form of 3D bounding box & BEV segmentation,  3D occupancy could capture the fine-grained details of critical obstacles in the scene.
 

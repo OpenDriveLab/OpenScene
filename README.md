@@ -35,13 +35,12 @@
 
 <!-- omit in toc -->
 ## Table of Contents
-- [Highlights](#highlights)
+- [Highlight](#Highlight)
+- [Tasks](#tasks)
 - [News](#news)
 - [Getting Started](#getting-started)
-  - [Results and Pre-trained Models](#results-and-pre-trained-models)
-- [TODO List](#todo-list)
-- [License \& Citation](#license--citation)
-- [Challenge](#challenge)
+- [ToDo](#todo)
+- [License](#license)
 - [Related resources](#related-resources)
 
 ## Highlight - Why Are We Exclusive?

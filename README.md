@@ -28,7 +28,7 @@
 
 
 > - [Paper in arXiv](https://arxiv.org/abs/2306.02851) | [CVPR 2023 AD Challenge Occupancy Track](https://github.com/CVPR2023-3D-Occupancy-Prediction/CVPR2023-3D-Occupancy-Prediction)
-> - Point of contact: [simachonghao@pjlab.org.cn](mailto:simachonghao@pjlab.org.cn))
+> - Point of contact: [simachonghao@pjlab.org.cn](mailto:simachonghao@pjlab.org.cn)
 
 </div>
 

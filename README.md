@@ -79,7 +79,7 @@ Compared to the formulation of `3D bounding box` and `BEV segmentation`,  3D occ
 | nuScenes   |             5.5  |  390k | 40k  | 1 LiDARs, 6 cameras  | 3D box, LiDAR segmentation  |
 | ONCE   |            144  |  1M | 15k | 1 LiDARs, 7 cameras  | 3D box  |
 | BDD100k   |            1000  |  100k | 100k| 1 camera  | 2D lane :cry:  |
-| **OpenScene (nuPlan)** |          **:boom: 120**  |  **:boom: 4M** |  **:boom: 4M** | 5 LiDARs, 8 cameras  | Occupancy |
+| **OpenScene (nuPlan)** |          **:boom: 120**  |  **:boom: 40M** |  **:boom: 4M** | 5 LiDARs, 8 cameras  | Occupancy |
 
 </center>
 

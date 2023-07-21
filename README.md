@@ -58,7 +58,7 @@ As we quote from the [OccNet]() work:
 Compared to the formulation of `3D bounding box` and `BEV segmentation`,  3D occupancy could capture the fine-grained details of critical obstacles in the driving scene.
 
 
-### Scale Up Data: A Massive Dataset for Visual Pre-Training and [DriveAGI]()
+### :fire:Scale Up Data: A Massive Dataset for Visual Pre-Training and [DriveAGI]()
 
 
 <!---

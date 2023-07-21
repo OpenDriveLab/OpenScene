@@ -46,19 +46,23 @@
 ## Highlights
 
 
-### Represent 3D Scenes as Occupancy: A Generic Approach
+### :oncoming_automobile: Representing 3D Scene as Occupancy
 
 <!---
 ![teaser](assets/figs/pipeline.PNG)
 --->
-As we quote from the [OccNet]() work:
 
-> :oncoming_automobile: We believe **Occupancy** serves as a `general` representation of the scene and could facilitate perception and planning in the full-stack of autonomous driving. 3D Occupancy is a geometry-aware representation of the scene.
+As we quote from [OccNet]():
+
+>  We believe **Occupancy** serves as a `general` representation of the scene and could facilitate perception and planning in the full-stack of autonomous driving. 3D Occupancy is a geometry-aware representation of the scene.
 
 Compared to the formulation of `3D bounding box` and `BEV segmentation`,  3D occupancy could capture the fine-grained details of critical obstacles in the driving scene.
 
 
-### :fire: Scale Up Data: A Massive Dataset for Visual Pre-Training and [DriveAGI]()
+### :fire: Scale Up Data: A Massive Dataset for Visual Pre-Training and [DriveAGI](https://github.com/OpenDriveLab/DriveAGI)
+
+
+Comparison to prevailing benchmarks in the wild: 
 
 
 <!---
@@ -72,25 +76,24 @@ Compared to the formulation of `3D bounding box` and `BEV segmentation`,  3D occ
 | **OpenScene** |          **:boom: 1200h**  |  **:boom: 120h** | 5 LiDARs, 8 cameras  | Occupancy |
 --->
 
-|  Dataset  |      Sensor Data (hr)     | Scans | Annotation Fames |  Sensor Configuration| Annotation Label | 
-|:---------:|:--------------------:|:---------:|:-------------:|:------:|:--------------------------------------------:|
-| KITTI  |           1.5  |  15k | 15k |1 LiDAR, 2 cameras    | 3D box, segmentation, depth, flow |
-| Waymo   |             6.4  |  230k | 230k | 5 LiDARs, 5 cameras    | 3D box  |
-| nuScenes   |             5.5  |  390k | 40k  | 1 LiDARs, 6 cameras  | 3D box, LiDAR segmentation  |
-| ONCE   |            144  |  1M | 15k | 1 LiDARs, 7 cameras  | 3D box  |
-| BDD100k   |            1000  |  100k | 100k| 1 camera  | 2D lane :cry:  |
-| **OpenScene (nuPlan)** |          **:boom: 120**  |  **:boom: 40M** |  **:boom: 4M** | 5 LiDARs, 8 cameras  | Occupancy |
+|  Dataset  |      Sensor Data (hr)     | Scans | Annotation Fames |  Sensor Configuration | Annotation Label | Ecosystem |
+|:---------:|:--------------------:|:---------:|:-------------:|:------:|:--------------------------------------------:|:----------------:|
+| KITTI  |           1.5  |  15k | 15k         | 1L 2C    | 3D box, segmentation, depth, flow | Leaderboard |
+| Waymo   |             6.4  |  230k | 230k   | 5L 5C    | 3D box  | Challenge |
+| nuScenes   |             5.5  |  390k | 40k  | 1L 6C  | 3D box, LiDAR segmentation  | Leaderboard |
+| ONCE   |            144  |  1M | 15k | 1L 7C  | 3D box  | - |
+| BDD100k   |            1000  |  100k | 100k| 1C  | 2D lane :cry:  | - |
+| **OpenScene** |          **:boom: 120**  |  **:boom: 40M** |  **:boom: 4M** | 5L 8C  | Occupancy | Leaderboard Challenge Workshop |
 
-</center>
+> L: LiDAR, C: Camera
 
-Experience from the sunny day does not apply to the dancing snowflakes. For machine learning, data is the must-have food. 
-To highlight, We provide over **120 hours** of occupancy labels collected in various cities, from Austin to Singapore and from Boston to Miami. 
-The diversity of data enables models to generalize in different atmospheres and landscapes.
+**OpenScene: The Largest Dataset for Occupancy**
+
+Driving behavior in the sunny day does not apply to that in the dancing snowflakes. For machine learning, data is the `must-have` food. 
+To highlight, we build OpenScene on top of [nuPlan](), covering a wide span of over **120 hours** of occupancy labels collected in various cities, from Austin, Boston, Miami to Singapore. The diversity of data enables models to generalize in different atmospheres and landscapes.
 
 
 <center>
-
-**The Largest Dataset for Occupancy**
   
 |  Dataset  | Original Database |      Sensor Data (hr)    |   Sweeps  | Flow | Semantic Classes                               |
 |:---------:|:-----------------:|:--------------------:|:-------------:|:------:|:--------------------------------------------:|

@@ -161,7 +161,54 @@ We will add semantic labels for background grids in future updates.
 
 ## Task and Evaluation Metric
 
-TODO
+### Pre-Training by Occupancy Forecasting
+
+The pre-training task is defined as occupancy forecasting by the intersection-over-union (**mIoU**) over all classes. 
+
+Let $C$ be the number of classes. 
+
+$$
+    \text{mIoU}=\frac{1}{C}\displaystyle \sum_{c=1}^{C}\frac{TP_c}{TP_c+FP_c+FN_c},
+$$
+
+where $TP_c$, $FP_c$, and $FN_c$ correspond to the number of true positive, false positive, and false negative predictions for class $c_i$.
+
+
+### Fine-Tunning with Diverse Downstream Tasks
+<!---
+<center>
+
+| Doenstream Tasks | KITTI | nuScenes | Waymo | Metrics |
+|:---------:|:---------:|:---------:|:---------------:|:-------------:|
+| 3D Detection |  :heavy_check_mark:| :heavy_check_mark:| :heavy_check_mark:  |   mAP  |
+| Semantic Segmantation |  :heavy_check_mark:| :heavy_check_mark:|   |   mIoU  |
+| Scene Completion |  :heavy_check_mark:| :heavy_check_mark:|   |   mIoU  |
+| Map Generation |  | :heavy_check_mark:|   |   mIoU  |
+| Object Tracking | :heavy_check_mark: | :heavy_check_mark:|   |   [HOTA](https://link.springer.com/article/10.1007/s11263-020-01375-2)  |
+| Depth Estimation |  :heavy_check_mark:| :heavy_check_mark:| :heavy_check_mark:  |   [SILog](https://www.cvlibs.net/datasets/kitti/eval_depth.php?benchmark=depth_prediction)  |
+| Visual Odometry |  :heavy_check_mark:| |   |   [Translation](https://www.cvlibs.net/datasets/kitti/eval_odometry.php)  |
+| Flow Estimation |  :heavy_check_mark:| |  |   [Fl-all](https://www.cvlibs.net/datasets/kitti/eval_scene_flow.php?benchmark=flow)  |
+| 3D Lane Detection |  | :heavy_check_mark: |  |   mAP  |
+
+</center>
+--->
+
+
+<center>
+
+| Doenstream Tasks | KITTI Metrics | nuScenes Metrics| Waymo Metrics | 
+|:---------:|:---------:|:---------:|:---------------:|
+| 3D Detection |  :heavy_check_mark: mAP| :heavy_check_mark: mAP & NDS | :heavy_check_mark:  ToDo|   
+| Semantic Segmantation |  :heavy_check_mark: mIoU| :heavy_check_mark: mIoU|   |   
+| Scene Completion |  :heavy_check_mark: mIoU| :heavy_check_mark: mIoU|   |   
+| Map Generation |  | :heavy_check_mark: mIoU|   |    
+| Object Tracking | :heavy_check_mark: [HOTA](https://link.springer.com/article/10.1007/s11263-020-01375-2)| :heavy_check_mark: ToDo|   |  
+| Depth Estimation |  :heavy_check_mark: [SILog](https://www.cvlibs.net/datasets/kitti/eval_depth.php?benchmark=depth_prediction)| :heavy_check_mark: ToDo| :heavy_check_mark:  ToDo|
+| Visual Odometry |  :heavy_check_mark: [Translation](https://www.cvlibs.net/datasets/kitti/eval_odometry.php)| |   |     |
+| Flow Estimation |  :heavy_check_mark: [Fl-all](https://www.cvlibs.net/datasets/kitti/eval_scene_flow.php?benchmark=flow) | | |
+| 3D Lane Detection |  | :heavy_check_mark: mAP|  |  
+
+</center>
 
 
 ## Ecosystem and Leaderboard

@@ -89,8 +89,8 @@ Comparison to prevailing benchmarks in the wild:
 
 **OpenScene: The Largest Dataset for Occupancy**
 
-Driving behavior in a sunny day does not apply to that in the dancing snowflakes. For machine learning, data is the `must-have` food. 
-To highlight, we build OpenScene on top of [nuPlan](https://www.nuscenes.org/nuplan#challenge), covering a wide span of over **120 hours** of occupancy labels collected in various cities, from Austin, Boston, Miami to Singapore. The diversity of data enables models to generalize in different atmospheres and landscapes.
+Driving behavior on a sunny day does not apply to that in dancing snowflakes. For machine learning, data is the `must-have` food. 
+To highlight, we build OpenScene on top of [nuPlan](https://www.nuscenes.org/nuplan#challenge), covering a wide span of over **120 hours** of occupancy labels collected in various cities, from Austin, Boston, and Miami to Singapore. The diversity of data enables models to generalize in different atmospheres and landscapes.
 
 
 <center>
@@ -193,12 +193,14 @@ where $TP_c$, $FP_c$, and $FN_c$ correspond to the number of true positive, fals
 </center>
 --->
 
+After pre-training, the fine-tuning stage allows for diverse downstream tasks to be defined on various datasets.
+
 
 <center>
 
 | Doenstream Tasks | KITTI Metrics | nuScenes Metrics| Waymo Metrics | 
 |:---------:|:---------:|:---------:|:---------------:|
-| 3D Detection |  :heavy_check_mark: mAP| :heavy_check_mark: mAP & NDS | :heavy_check_mark:  ToDo|   
+| 3D Detection |  :heavy_check_mark: mAP| :heavy_check_mark: [mAP & NDS](https://www.nuscenes.org/object-detection?externalData=all&mapData=all&modalities=Any) | :heavy_check_mark:  ToDo|   
 | Semantic Segmantation |  :heavy_check_mark: mIoU| :heavy_check_mark: mIoU|   |   
 | Scene Completion |  :heavy_check_mark: mIoU| :heavy_check_mark: mIoU|   |   
 | Map Generation |  | :heavy_check_mark: mIoU|   |    
@@ -219,7 +221,7 @@ where $TP_c$, $FP_c$, and $FN_c$ correspond to the number of true positive, fals
 Given images from multiple cameras, the goal is to predict the current occupancy state and semantics of each voxel grid in the scene. The voxel state is predicted to be either free or occupied. If a voxel is occupied, its semantic class needs to be predicted, as well. Besides, we also provide a binary observed/unobserved mask for each frame. An observed voxel is defined as an invisible grid in the current camera observation, which is ignored in the evaluation stage.
 
 
-### Task 1 - Domain-Specific Fine-Tunning
+### Task 1： Multifaceted-Task Fine-Tunning
 
 Given an occupancy detection network (OccNet) pre-trained on nuPlan, the goal is to fine-tune the network while freezing the backbone parameters, so that the model can adapt to domain shifts and perform as many downstream tasks as possible on the nuScenes dataset. The fine-tuning stage uses the nuScenes Trainval set as data and the downstream tasks include `occupancy detection, 3D detection, map segmentation, and object tracking`.
 
@@ -231,7 +233,7 @@ Given an occupancy detection network (OccNet) pre-trained on nuPlan, the goal is
 
 
 
-### Task 2 - Unified Large-Scale Pre-Training
+### Task 2： Unified Large-Scale Pre-Training
 
 We provide the full occupancy data of nuPlan, and participants are required to explore a large-scale pre-training method that enables pre-trained models to perform well on various datasets and downstream tasks after fine-tuning on small-batch data. The sub-datasets include `nuScenes, Waymo, and KITTI`, and the sub-tasks include `occupancy detection, 3D detection, map segmentation, and object tracking`. We will make the required fine-tuning datasets publicly available, but the test datasets will not be disclosed.
 
@@ -255,11 +257,33 @@ We provide the full occupancy data of nuPlan, and participants are required to e
 
 ## Getting Started
 
+
+### Download-ToDo
+The files mentioned below can also be downloaded via <img src="https://user-images.githubusercontent.com/29263416/222076048-21501bac-71df-40fa-8671-2b5f8013d2cd.png" alt="OpenDataLab" width="18"/>[OpenDataLab](https://opendatalab.com/CVPR2023-3D-Occupancy/download).It is recommended to use provided [command line interface](https://opendatalab.com/CVPR2023-3D-Occupancy/cli) for acceleration.
+
+| Subset | Google Drive <img src="https://ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png" alt="Google Drive" width="18"/> | Baidu Cloud <img src="https://nd-static.bdstatic.com/m-static/v20-main/favicon-main.ico" alt="Baidu Yun" width="18"/> | Size |
+| :---: | :---: | :---: | :---: |
+| mini | [data](https://drive.google.com/drive/folders/1ksWt4WLEqOxptpWH2ZN-t1pjugBhg3ME?usp=share_link) | [data](https://pan.baidu.com/s/1IvOoJONwzKBi32Ikjf8bSA?pwd=5uv6)  | approx. 440M |
+| trainval  | [data](https://drive.google.com/drive/folders/1JObO75iTA2Ge5fa8D3BWC8R7yIG8VhrP?usp=share_link) | [data](https://pan.baidu.com/s/1_4yE0__UDIJS8JtBSB0Bpg?pwd=li5h) | approx. 32G |
+| test | [data](https://drive.google.com/drive/folders/1hVs2AzSlEePN7QR502d8q7FoAbdJLxx8?usp=share_link) | [data](https://pan.baidu.com/s/1ElTu7i5gjXz3TwE2L0YBQQ?pwd=jstt) | approx. 6G |
+
+* Mini and trainval data contain three parts -- `imgs`, `gts` and `annotations`. The `imgs` datas have the same hierarchy with the image samples in the original nuScenes dataset.
+
+
+### Development Kit-ToDo
+
+We provide a baseline model based on [OccNet](https://github.com/OpenDriveLab/OccNet).
+
+Please refer to [getting_started](docs/getting_started.md) for details.
+
+
+
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-Download Data
 
-Tutorial
+
+
 
 
 

@@ -147,13 +147,12 @@ We will add semantic labels for background grids in future updates.
 |:---------:|:-----------------|
 | Location | Las Vegas (64%), Singapore (15%), Pittsburgh (12%), Boston (9%) |
 | Duration | 15910 logs, 120+ hours |
-| Scenarios |  Total unique scenario types |
 | Scenario categories | Dynamics: 5 types (e.g. high lateral acceleration) <br>  Interaction: 18 types (e.g. waiting for pedestrians to cross) <br> Zone: 8 types (e.g. on pickup-dropoff area) <br> Maneuver: 22 types (e.g. unprotected cross turn) <br>  Behavior: 22 types (e.g. stopping at a traffic light with a lead vehicle ahead) |
 | Tracks| Frequency of tracks/ego: 20hz <br> Average length of tracks: 9.64s |
 |Object classes| Vehicle, Bicycle, Pedestrian, Traffic cone, Barrier, Construction zone sign, Generic object |
 | Split | Trainval (1310 logs), Test (147 logs), Mini (64 logs) |
 | Voxel | Range: [-50m, -50m, -4m, 50m, 50m, 4m]; Size: 0.5m |
-
+<!---| Scenarios |  Total unique scenario types |--->
 
 </center>
 

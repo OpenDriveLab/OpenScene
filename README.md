@@ -52,7 +52,7 @@
 ![teaser](assets/figs/pipeline.PNG)
 --->
 
-As we quote from [OccNet]():
+As we quote from [OccNet](https://arxiv.org/abs/2306.02851):
 
 >  **Occupancy** serves as a `general` representation of the scene and could facilitate perception and planning in the full-stack of autonomous driving. 3D Occupancy is a geometry-aware representation of the scene.
 
@@ -68,9 +68,9 @@ Comparison to prevailing benchmarks in the wild:
 <!---
 |  Dataset  |      Raw Data      |   Annotation Duration  |Sensor Configuration| Annotation Label | 
 |:---------:|:--------------------:|:-------------:|:------:|:--------------------------------------------:|
-| KITTI  |           1.5h  |  1.5h | 1 LiDAR, 2 cameras    | 3D box, segmentation, depth, flow |
-| Waymo   |             6.4h  |  6.4h | 5 LiDARs, 5 cameras    | 3D box  |
-| nuScenes   |             5.5h  |  5.5h | 1 LiDARs, 6 cameras  | 3D box, LiDAR segmentation  |
+| [KITTI](https://www.cvlibs.net/datasets/kitti/index.php)  |           1.5h  |  1.5h | 1 LiDAR, 2 cameras    | 3D box, segmentation, depth, flow |
+| [Waymo](https://waymo.com/)   |             6.4h  |  6.4h | 5 LiDARs, 5 cameras    | 3D box  |
+| [nuScenes](https://www.nuscenes.org/)   |             5.5h  |  5.5h | 1 LiDARs, 6 cameras  | 3D box, LiDAR segmentation  |
 | ONCE   |            144h  |  2.2h | 1 LiDARs, 7 cameras  | 3D box  |
 | ~~BDD100k~~   |            1000h  |  1000h | 1 camera  | 2D lane :cry:  |
 | **OpenScene** |          **:boom: 1200h**  |  **:boom: 120h** | 5 LiDARs, 8 cameras  | Occupancy |
@@ -89,7 +89,7 @@ Comparison to prevailing benchmarks in the wild:
 
 **OpenScene: The Largest Dataset for Occupancy**
 
-Driving behavior in the sunny day does not apply to that in the dancing snowflakes. For machine learning, data is the `must-have` food. 
+Driving behavior in a sunny day does not apply to that in the dancing snowflakes. For machine learning, data is the `must-have` food. 
 To highlight, we build OpenScene on top of [nuPlan](), covering a wide span of over **120 hours** of occupancy labels collected in various cities, from Austin, Boston, Miami to Singapore. The diversity of data enables models to generalize in different atmospheres and landscapes.
 
 

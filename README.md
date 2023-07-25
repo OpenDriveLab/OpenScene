@@ -69,20 +69,20 @@ Comparison to prevailing benchmarks in the wild:
 |  Dataset  |      Raw Data      |   Annotation Duration  |Sensor Configuration| Annotation Label | 
 |:---------:|:--------------------:|:-------------:|:------:|:--------------------------------------------:|
 | [KITTI](https://www.cvlibs.net/datasets/kitti/index.php)  |           1.5h  |  1.5h | 1 LiDAR, 2 cameras    | 3D box, segmentation, depth, flow |
-| [Waymo](https://waymo.com/)   |             6.4h  |  6.4h | 5 LiDARs, 5 cameras    | 3D box  |
+| [Waymo](https://waymo.com/open/)   |             6.4h  |  6.4h | 5 LiDARs, 5 cameras    | 3D box  |
 | [nuScenes](https://www.nuscenes.org/)   |             5.5h  |  5.5h | 1 LiDARs, 6 cameras  | 3D box, LiDAR segmentation  |
-| ONCE   |            144h  |  2.2h | 1 LiDARs, 7 cameras  | 3D box  |
-| ~~BDD100k~~   |            1000h  |  1000h | 1 camera  | 2D lane :cry:  |
+| [ONCE](https://once-for-auto-driving.github.io/)   |            144h  |  2.2h | 1 LiDARs, 7 cameras  | 3D box  |
+| ~~[BDD100k](https://www.vis.xyz/bdd100k/)~~   |            1000h  |  1000h | 1 camera  | 2D lane :cry:  |
 | **OpenScene** |          **:boom: 1200h**  |  **:boom: 120h** | 5 LiDARs, 8 cameras  | Occupancy |
 --->
 
 |  Dataset  |      Sensor Data (hr)     | Scans | Annotation Fames |  Sensor Configuration | Annotation Label | Ecosystem |
 |:---------:|:--------------------:|:---------:|:-------------:|:------:|:--------------------------------------------:|:----------------:|
-| KITTI  |           1.5  |  15k | 15k         | 1L 2C    | 3D box, segmentation, depth, flow | Leaderboard |
-| Waymo   |             6.4  |  230k | 230k   | 5L 5C    | 3D box  | Challenge |
-| nuScenes   |             5.5  |  390k | 40k  | 1L 6C  | 3D box, LiDAR segmentation  | Leaderboard |
-| ONCE   |            144  |  1M | 15k | 1L 7C  | 3D box  | - |
-| BDD100k   |            1000  |  100k | 100k| 1C  | 2D lane :cry:  | - |
+| [KITTI](https://www.cvlibs.net/datasets/kitti/index.php)  |           1.5  |  15k | 15k         | 1L 2C    | 3D box, segmentation, depth, flow | Leaderboard |
+| [Waymo](https://waymo.com/open/)   |             6.4  |  230k | 230k   | 5L 5C    | 3D box  | Challenge |
+| [nuScenes](https://www.nuscenes.org/)   |             5.5  |  390k | 40k  | 1L 6C  | 3D box, LiDAR segmentation  | Leaderboard |
+| [ONCE](https://once-for-auto-driving.github.io/)   |            144  |  1M | 15k | 1L 7C  | 3D box  | - |
+| [BDD100k](https://www.vis.xyz/bdd100k/)   |            1000  |  100k | 100k| 1C  | 2D lane :cry:  | - |
 | **OpenScene** |          **:boom: 120**  |  **:boom: 40M** |  **:boom: 4M** | 5L 8C  | Occupancy | Leaderboard Challenge Workshop |
 
 > L: LiDAR, C: Camera
@@ -90,21 +90,21 @@ Comparison to prevailing benchmarks in the wild:
 **OpenScene: The Largest Dataset for Occupancy**
 
 Driving behavior in a sunny day does not apply to that in the dancing snowflakes. For machine learning, data is the `must-have` food. 
-To highlight, we build OpenScene on top of [nuPlan](), covering a wide span of over **120 hours** of occupancy labels collected in various cities, from Austin, Boston, Miami to Singapore. The diversity of data enables models to generalize in different atmospheres and landscapes.
+To highlight, we build OpenScene on top of [nuPlan](https://www.nuscenes.org/nuplan#challenge), covering a wide span of over **120 hours** of occupancy labels collected in various cities, from Austin, Boston, Miami to Singapore. The diversity of data enables models to generalize in different atmospheres and landscapes.
 
 
 <center>
   
 |  Dataset  | Original Database |      Sensor Data (hr)    |   Sweeps  | Flow | Semantic Classes                               |
 |:---------:|:-----------------:|:--------------------:|:-------------:|:------:|:--------------------------------------------:|
-| MonoScene  |      NYUv2/SemanticKITTI     | 4.1  |  1 | ×    | 19   |
-| [Occ3D](https://github.com/FANG-MING/occupancy-for-nuscenes/tree/main)   |      nuScenes     | 5.5  |  10 | ×    | 16  |
-| Occupancy-for-nuScenes   |      nuScenes     | 5.5  |  20 | ×    | 16  |
-| SurroundOcc   |      nuScenes     | 5.5  |  10 | ×    | 16  |
-| OpenOccupancy   |      nuScenes     | 5.5  |  10 | ×    | 16  |
-| SSCBench   |      KITTI-360/nuScenes/Waymo     | 13.4  |  10 | ×    | 16  |
-| [OccNet](https://github.com/OpenDriveLab/OccNet)   |      nuScenes     | 5.5  |  **40** | ×    | 16   |
-| **OpenScene** |       nuPlan      | **:boom: 120**  |  **40** | **√**    | **7+X** |
+| [MonoScene](https://github.com/astra-vision/MonoScene)  |      NYUv2/SemanticKITTI     | 4.1  |  1 | :x:     | 19   |
+| [Occ3D](https://github.com/FANG-MING/occupancy-for-nuscenes/tree/main)   |      nuScenes     | 5.5  |  10 | :x:    | 16  |
+| [Occupancy-for-nuScenes](https://github.com/FANG-MING/occupancy-for-nuscenes)   |      nuScenes     | 5.5  |  20 | :x:     | 16  |
+| [SurroundOcc](https://github.com/weiyithu/SurroundOcc)   |      nuScenes     | 5.5  |  10 | :x:    | 16  |
+| [OpenOccupancy](https://github.com/JeffWang987/OpenOccupancy)   |      nuScenes     | 5.5  |  10 | :x:     | 16  |
+| [SSCBench](https://github.com/ai4ce/SSCBench)   |      KITTI-360/nuScenes/Waymo     | 13.4  |  10 | :x:     | 16  |
+| [OccNet](https://github.com/OpenDriveLab/OccNet)   |      nuScenes     | 5.5  |  **40** | :x:     | 16   |
+| **OpenScene** |       nuPlan      | **:boom: 120**  |  **40** | **:heavy_check_mark:**    | **7+X** |
 
 </center>
 

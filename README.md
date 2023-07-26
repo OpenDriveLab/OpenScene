@@ -221,13 +221,19 @@ After pre-training, the fine-tuning stage allows for diverse downstream tasks to
 
 ## Ecosystem and Leaderboard
 
+### Upcoming Challenge in 2024
+
+We plan to release a trailer version of the upcoming challenge. Please stay tuned for more details in `Late August`.
 
 
-
-### CVPR 2023 3D Occupancy Prediction Challenge
+### CVPR 2023 3D Occupancy Prediction Challenge (Server remains active)
 
 Given images from multiple cameras, the goal is to predict the current occupancy state and semantics of each voxel grid in the scene. The voxel state is predicted to be either free or occupied. If a voxel is occupied, its semantic class needs to be predicted, as well. Besides, we also provide a binary observed/unobserved mask for each frame. An observed voxel is defined as an invisible grid in the current camera observation, which is ignored in the evaluation stage.
 
+
+- Challenge website: [AD23Challenge](https://opendrivelab.com/AD23Challenge.html#Track3)
+
+![Leaderboard](assets/figs/leaderboard-06-10-2023.png)
 
 ### Task 1： Multifaceted-Task Fine-Tunning
 
@@ -313,9 +319,9 @@ Please consider citing our paper if the project helps your research with the fol
 
 ## Related resources
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-- [BEVFormer](https://github.com/fundamentalvision/BEVFormer)
-- [Bird's-eye-view Perception](https://github.com/OpenDriveLab/BEVPerception-Survey-Recipe)
+- [DriveAGI](https://github.com/OpenDriveLab/DriveAGI) | [DriveLM](https://github.com/OpenDriveLab/DriveLM) (TBA) | [OpenLane-V2](https://github.com/OpenDriveLab/OpenLane-V2)
 - [OccNet](https://github.com/OpenDriveLab/OccNet)
+- [Bird's-eye-view Perception](https://github.com/OpenDriveLab/BEVPerception-Survey-Recipe) | [BEVFormer](https://github.com/fundamentalvision/BEVFormer)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>

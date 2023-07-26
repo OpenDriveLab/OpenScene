@@ -133,11 +133,13 @@ We will add semantic labels for background grids in future updates.
 
 
 ## Table of Contents
-- [Highlights](#Highlights)
-- [Task and Evaluation](#tasks)
+- [Grad-and-Go](#grad-and-go)
+- [Fact Sheet](#fact-sheet)
+- [Task and Evaluation Metric](#task-and-evaluation-metric)
+- [Ecosystem and Leaderboard](#ecosystem-and-leaderboard)
 - [Getting Started](#getting-started)
 - [ToDo](#todo)
-- [License](#license)
+- [License and Citation](#license-and-citation)
 - [Related resources](#related-resources)
 
 ## Grad-and-Go
@@ -227,6 +229,7 @@ After pre-training, the fine-tuning stage allows for diverse downstream tasks to
 ### Upcoming Challenge in 2024
 
 We plan to release a trailer version of the upcoming challenge. Please stay tuned for more details in `Late August`.
+- Challenge Page: [Private-AD24](/docs/challenge.md)
 
 
 ### CVPR 2023 3D Occupancy Prediction Challenge (Server remains `active`)
@@ -243,14 +246,11 @@ Given images from multiple cameras, the goal is to predict the current occupancy
 
 
 
-
-
-
 ## TODO 
 - [x] 3D Occupancy and flow dataset `v1.0`
-- [ ] 3D Occupancy prediction code `v1.0`
-- [ ] Pre-trained models
-- [ ] Semantic labels
+- [ ] Devkit release `v1.0`
+- [ ] Full semantic labels
+- [ ] Upcoming challenge
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -262,18 +262,7 @@ Given images from multiple cameras, the goal is to predict the current occupancy
 - [Train a Model](/docs/getting_started.md#train-a-model)
 
 
-
-
-
-
-
-
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-
-
 
 
 ## License and Citation

@@ -30,18 +30,6 @@
 > - Point of contact: [contact@opendrivelab.com](mailto:contact@opendrivelab.com)
 
 
-## Grad-and-Go
-
-- **`[07/21]`** OpenScene `v1.0` released
-
-
-## Table of Contents
-- [Highlights](#Highlights)
-- [Task and Evaluation](#tasks)
-- [Getting Started](#getting-started)
-- [ToDo](#todo)
-- [License](#license)
-- [Related resources](#related-resources)
 
 ## Highlights
 
@@ -144,6 +132,21 @@ We will add semantic labels for background grids in future updates.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
+## Table of Contents
+- [Highlights](#Highlights)
+- [Task and Evaluation](#tasks)
+- [Getting Started](#getting-started)
+- [ToDo](#todo)
+- [License](#license)
+- [Related resources](#related-resources)
+
+## Grad-and-Go
+
+- **`[07/21]`** OpenScene `v1.0` released
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ## Fact Sheet
 
 <center>
@@ -226,7 +229,7 @@ After pre-training, the fine-tuning stage allows for diverse downstream tasks to
 We plan to release a trailer version of the upcoming challenge. Please stay tuned for more details in `Late August`.
 
 
-### CVPR 2023 3D Occupancy Prediction Challenge (Server remains active)
+### CVPR 2023 3D Occupancy Prediction Challenge (Server remains `active`)
 
 Given images from multiple cameras, the goal is to predict the current occupancy state and semantics of each voxel grid in the scene. The voxel state is predicted to be either free or occupied. If a voxel is occupied, its semantic class needs to be predicted, as well. Besides, we also provide a binary observed/unobserved mask for each frame. An observed voxel is defined as an invisible grid in the current camera observation, which is ignored in the evaluation stage.
 
@@ -234,6 +237,11 @@ Given images from multiple cameras, the goal is to predict the current occupancy
 - Challenge website: [AD23Challenge](https://opendrivelab.com/AD23Challenge.html#Track3)
 
 ![Leaderboard](assets/figs/leaderboard-06-10-2023.png)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
 
 ### Task 1： Multifaceted-Task Fine-Tunning
 
@@ -270,6 +278,11 @@ We provide the full occupancy data of nuPlan, and participants are required to e
 
 
 ## Getting Started
+- [Download Data](/docs/getting_started.md#download-data)
+- [Install Devkit](/docs/getting_started.md#install-devkit)
+- [Prepare Dataset](/docs/getting_started.md#prepare-dataset)
+- [Train a Model](/docs/getting_started.md#train-a-model)
+
 
 
 ### Download-ToDo

@@ -34,8 +34,7 @@
 - **`[07/21]`** OpenScene `v1.0` released
 
 ## Table of Contents
-- [Grad-and-Go](#grad-and-go)
-- [Fact Sheet](#fact-sheet)
+- [Highlights](#highlights)
 - [Task and Evaluation Metric](#task-and-evaluation-metric)
 - [Ecosystem and Leaderboard](#ecosystem-and-leaderboard)
 - [Getting Started](#getting-started)
@@ -128,13 +127,16 @@ We will add semantic labels for background grids in future updates.
 
 
 
-
 ## Task and Evaluation Metric
 
-We consider occupancy as a unified representation for various sub-tasks within autonomous driving perception, general scene understanding, and embodied robotics.
-The pre-training of occupancy detection tasks on massive data is expected to benefit various downstream perception-related tasks.
+<!---We consider occupancy as a unified representation for various sub-tasks within autonomous driving perception, general scene understanding, and embodied robotics.
+The pre-training of occupancy detection tasks on massive data is expected to benefit various downstream perception-related tasks.--->
 
-### Large-Scale Occupancy Prediction
+### Task 1: Large-Scale Occupancy Prediction
+
+
+
+
 
 The pre-training task is defined as occupancy prediction by the intersection-over-union (**mIoU**) over all classes. 
 
@@ -147,7 +149,7 @@ $$
 where $TP_c$, $FP_c$, and $FN_c$ correspond to the number of true positive, false positive, and false negative predictions for class $c_i$.
 
 
-### All-in-One Model Verification with Diverse Downstream Tasks
+### Task 2: All-in-One Model Verification with Diverse Downstream Tasks
 
 
 After pre-training, the fine-tuning stage allows for diverse downstream tasks to be defined on various datasets.

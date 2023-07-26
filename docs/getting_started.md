@@ -13,6 +13,8 @@ The files mentioned below can also be downloaded via <img src="https://user-imag
 * Mini and trainval data contain three parts -- `imgs`, `gts` and `annotations`. The `imgs` datas have the same hierarchy with the image samples in the original nuScenes dataset.
 
 
+# Install Devkit
+
 ### Development Kit-ToDo
 
 We provide a baseline model based on [OccNet](https://github.com/OpenDriveLab/OccNet).
@@ -20,7 +22,9 @@ We provide a baseline model based on [OccNet](https://github.com/OpenDriveLab/Oc
 Please refer to [getting_started](docs/getting_started.md) for details.
 
 
+# Prepare Dataset
 
+# Train a Model
 
 
 # Prerequisites

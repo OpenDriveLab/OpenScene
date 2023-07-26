@@ -3,7 +3,7 @@
 
 # OpenScene
 
-**The Largest Up-to-Date 3D Occupancy Forecasting Benchmark in Autonomous Driving**
+**The Largest Up-to-Date 3D Occupancy Prediction Benchmark in Autonomous Driving**
 
 <a href="#数据">
   <img alt="OpenScene-v1: v1.0" src="https://img.shields.io/badge/OpenScene--V1-v1.0-blueviolet"/>
@@ -134,9 +134,9 @@ We will add semantic labels for background grids in future updates.
 We consider occupancy as a unified representation for various sub-tasks within autonomous driving perception, general scene understanding, and embodied robotics.
 The pre-training of occupancy detection tasks on massive data is expected to benefit various downstream perception-related tasks.
 
-### Pre-Training by Occupancy Forecasting
+### Large-Scale Occupancy Prediction
 
-The pre-training task is defined as occupancy forecasting by the intersection-over-union (**mIoU**) over all classes. 
+The pre-training task is defined as occupancy prediction by the intersection-over-union (**mIoU**) over all classes. 
 
 Let $C$ be the number of classes. 
 
@@ -147,30 +147,14 @@ $$
 where $TP_c$, $FP_c$, and $FN_c$ correspond to the number of true positive, false positive, and false negative predictions for class $c_i$.
 
 
-### Fine-Tunning with Diverse Downstream Tasks
-<!---
-<center>
+### All-in-One Model Verification with Diverse Downstream Tasks
 
-| Doenstream Tasks | KITTI | nuScenes | Waymo | Metrics |
-|:---------:|:---------:|:---------:|:---------------:|:-------------:|
-| 3D Detection |  :heavy_check_mark:| :heavy_check_mark:| :heavy_check_mark:  |   mAP  |
-| Semantic Segmantation |  :heavy_check_mark:| :heavy_check_mark:|   |   mIoU  |
-| Scene Completion |  :heavy_check_mark:| :heavy_check_mark:|   |   mIoU  |
-| Map Generation |  | :heavy_check_mark:|   |   mIoU  |
-| Object Tracking | :heavy_check_mark: | :heavy_check_mark:|   |   [HOTA](https://link.springer.com/article/10.1007/s11263-020-01375-2)  |
-| Depth Estimation |  :heavy_check_mark:| :heavy_check_mark:| :heavy_check_mark:  |   [SILog](https://www.cvlibs.net/datasets/kitti/eval_depth.php?benchmark=depth_prediction)  |
-| Visual Odometry |  :heavy_check_mark:| |   |   [Translation](https://www.cvlibs.net/datasets/kitti/eval_odometry.php)  |
-| Flow Estimation |  :heavy_check_mark:| |  |   [Fl-all](https://www.cvlibs.net/datasets/kitti/eval_scene_flow.php?benchmark=flow)  |
-| 3D Lane Detection |  | :heavy_check_mark: |  |   mAP  |
-
-</center>
---->
 
 After pre-training, the fine-tuning stage allows for diverse downstream tasks to be defined on various datasets.
 
 
-<center>
-  
+
+<!---
 | Downstream Tasks | KITTI Metrics | nuScenes Metrics| Waymo Metrics | 
 |:---------:|:---------:|:---------:|:---------------:|
 | 3D Detection |  :heavy_check_mark: mAP| :heavy_check_mark: [mAP & NDS](https://www.nuscenes.org/object-detection?externalData=all&mapData=all&modalities=Any) | :heavy_check_mark:  [AP & APH](https://waymo.com/open/challenges/2020/3d-detection/)|   
@@ -182,7 +166,24 @@ After pre-training, the fine-tuning stage allows for diverse downstream tasks to
 | Visual Odometry |  :heavy_check_mark: [Translation](https://www.cvlibs.net/datasets/kitti/eval_odometry.php)| - |  - | 
 | Flow Estimation |  :heavy_check_mark: [Fl-all](https://www.cvlibs.net/datasets/kitti/eval_scene_flow.php?benchmark=flow) |  - | :heavy_check_mark: [EPE](https://waymo.com/open/challenges/2022/occupancy-flow-prediction-challenge/) |
 | 3D Lane Detection | - |:heavy_check_mark: [mAP](https://github.com/OpenDriveLab/OpenLane-V2/) | :heavy_check_mark: [F1-Score](https://github.com/OpenDriveLab/OpenLane) |  
+--->
+
+<center>
+
+| Downstream Task | KITTI | nuScenes| Waymo | Scene Diversity| OSM |
+|:---------:|:---------:|:---------:|:---------------:|:---------:|:---:|
+| 3D Detection |  | :heavy_check_mark:  | |   | [NDS](https://www.nuscenes.org/object-detection?externalData=all&mapData=all&modalities=Any) |
+| Semantic Segmentation |  | :heavy_check_mark: |  |  | mIoU |   
+| Scene Completion |  | :heavy_check_mark: |   |   | mIoU |
+| Map Construction |  | :heavy_check_mark: |   |    | mAP  |
+| Object Tracking | |  |  :heavy_check_mark: |   | [MOTA](https://waymo.com/open/challenges/2020/3d-tracking/)  |  
+| Depth Estimation |  :heavy_check_mark: |  |  |   | [SILog](https://www.cvlibs.net/datasets/kitti/eval_depth.php?benchmark=depth_prediction)  |
+| Visual Odometry |  :heavy_check_mark: |  |   |   |  [Translation](https://www.cvlibs.net/datasets/kitti/eval_odometry.php)  |
+| Flow Estimation |  :heavy_check_mark:  |   |  |   | [Fl-all](https://www.cvlibs.net/datasets/kitti/eval_scene_flow.php?benchmark=flow)   |
+| 3D Lane Detection |  |  | :heavy_check_mark:  |  | [F1-Score](https://github.com/OpenDriveLab/OpenLane) |
+
 </center>
+
 
 
 ## Ecosystem and Leaderboard

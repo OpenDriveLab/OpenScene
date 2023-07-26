@@ -232,7 +232,7 @@ After pre-training, the fine-tuning stage allows for diverse downstream tasks to
 ### Upcoming Challenge in 2024
 
 We plan to release a trailer version of the upcoming challenge. Please stay tuned for more details in `Late August`.
-- Challenge Page: [Private-AD24](/docs/challenge.md)
+- Challenge Page: [Private-AD24](/docs/challenge.md) (TBA)
 
 
 ### CVPR 2023 3D Occupancy Prediction Challenge (Server remains `active`)

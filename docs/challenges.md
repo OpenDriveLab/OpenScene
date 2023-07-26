@@ -1,4 +1,4 @@
-### Task 1： Multifaceted-Task Fine-Tunning
+### ~~Task 1： Multifaceted-Task Fine-Tunning~~
 
 Given an occupancy detection network (OccNet) pre-trained on nuPlan, the goal is to fine-tune the network while freezing the backbone parameters, so that the model can adapt to domain shifts and perform as many downstream tasks as possible on the nuScenes dataset. The fine-tuning stage uses the nuScenes Trainval set as data and the downstream tasks include `occupancy detection, 3D detection, map segmentation, and object tracking`.
 
@@ -10,7 +10,7 @@ Given an occupancy detection network (OccNet) pre-trained on nuPlan, the goal is
 
 
 
-### Task 2： Unified Large-Scale Pre-Training
+### :fire:Task 2： Unified Large-Scale Pre-Training
 
 We provide the full occupancy data of nuPlan, and participants are required to explore a large-scale pre-training method that enables pre-trained models to perform well on various datasets and downstream tasks after fine-tuning on small-batch data. The sub-datasets include `nuScenes, Waymo, and KITTI`, and the sub-tasks include `occupancy detection, 3D detection, map segmentation, and object tracking`. We will make the required fine-tuning datasets publicly available, but the test datasets will not be disclosed.
 

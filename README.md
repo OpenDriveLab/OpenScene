@@ -90,7 +90,8 @@ Comparison to prevailing benchmarks in the wild:
 **OpenScene: The Largest Dataset for Occupancy**
 
 Driving behavior on a sunny day does not apply to that in dancing snowflakes. For machine learning, data is the `must-have` food. 
-To highlight, we build OpenScene on top of [nuPlan](https://www.nuscenes.org/nuplan#challenge), covering a wide span of over **120 hours** of occupancy labels collected in various cities, from Austin, Boston, and Miami to Singapore. The diversity of data enables models to generalize in different atmospheres and landscapes.
+To highlight, we build OpenScene on top of [nuPlan](https://www.nuscenes.org/nuplan#challenge), covering a wide span of over **120 hours** of occupancy labels collected in various cities, from `Austin`, `Boston`, `Miami` to `Singapore`.
+<!---The diversity of data enables models to generalize in different atmospheres and landscapes.--->
 
 
 <center>
@@ -108,22 +109,26 @@ To highlight, we build OpenScene on top of [nuPlan](https://www.nuscenes.org/nup
 
 </center>
 
-
-We consider occupancy as a unified representation for various sub-tasks within autonomous driving perception, general scene understanding, and robotics navigation.
+<!---
+We consider occupancy as a unified representation for various sub-tasks within autonomous driving perception, general scene understanding, and embodied robotics.
 The released OpenScene is the largest dataset with occupancy representation.
-The pre-training of occupancy detection tasks on massive datasets is expected to benefit various downstream perception-related tasks, such as 3D object detection, semantic segmentation, depth estimation, scene completion, and so on.
+The pre-training of occupancy detection tasks on massive datasets is expected to benefit various downstream perception-related tasks.
+--->
 
 
+### Beyond Perception: Empowering DriveAGI with Motional Occupancy
 
-### Beyond Perception: Empowering DriveAGI with Occupancy Flow
 
 What kind of modeling is needed for autonomous driving scenarios to meet the demands of planning-oriented perception?
+<!---
 Previous occupancy datasets were annotated in a static scene. 
 However, in practical applications, static occupancy data cannot support vehicle route planning due to the lack of instance motion information. Therefore, **occupancy flow** data is indispensable.
-We posit that incorporating the motion information of occupancy flow can help bridge the gap between decision-making and scene representation.
+--->
+We posit that incorporating the motion information of **occupancy flow** can help bridge the gap between `decision-making` and `scene representation`.
+Besides, the OpenScene dataset provides semantic labels for each foreground grid. 
+We will add semantic labels of background grids in future updates for boosting open-vocabulary detection.
 
-
-
+<!---
 ### Explore the World Fully: Recognizing Scenarios with Semantic Labels
 
 
@@ -134,7 +139,7 @@ The richness of the scene's semantics can greatly ensure driving safety.
 We hope that the establishment of this dataset can promote the development of driving scene semantic-level perception tasks. 
 The OpenScene dataset provides semantic labels for each foreground grid. 
 We will add semantic labels for background grids in future updates.
-
+--->
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -202,12 +207,12 @@ After pre-training, the fine-tuning stage allows for diverse downstream tasks to
 | 3D Detection |  :heavy_check_mark: mAP| :heavy_check_mark: [mAP & NDS](https://www.nuscenes.org/object-detection?externalData=all&mapData=all&modalities=Any) | :heavy_check_mark:  [AP & APH](https://waymo.com/open/challenges/2020/3d-detection/)|   
 | Semantic Segmentation |  :heavy_check_mark: mIoU| :heavy_check_mark: mIoU|  :heavy_check_mark: mIoU |   
 | Scene Completion |  :heavy_check_mark: mIoU| :heavy_check_mark: mIoU| :heavy_check_mark: mIoU  |   
-| Map Generation |  | :heavy_check_mark: mIoU| :heavy_check_mark: mIoU  |    
+| Map Generation | - | :heavy_check_mark: mIoU| :heavy_check_mark: mIoU  |    
 | Object Tracking | :heavy_check_mark: [HOTA](https://link.springer.com/article/10.1007/s11263-020-01375-2)| :heavy_check_mark: [AMOTA & AMOTP](https://www.nuscenes.org/tracking?externalData=all&mapData=all&modalities=Any)|  :heavy_check_mark:[MOTA & MOTP](https://waymo.com/open/challenges/2020/3d-tracking/) |  
-| Depth Estimation |  :heavy_check_mark: [SILog](https://www.cvlibs.net/datasets/kitti/eval_depth.php?benchmark=depth_prediction)| :heavy_check_mark: [Abs Rel](https://arxiv.org/abs/2204.03636)| |
-| Visual Odometry |  :heavy_check_mark: [Translation](https://www.cvlibs.net/datasets/kitti/eval_odometry.php)| |   |     |
-| Flow Estimation |  :heavy_check_mark: [Fl-all](https://www.cvlibs.net/datasets/kitti/eval_scene_flow.php?benchmark=flow) | | :heavy_check_mark: [EPE](https://waymo.com/open/challenges/2022/occupancy-flow-prediction-challenge/) |
-| 3D Lane Detection |  |:heavy_check_mark: [mAP](https://github.com/OpenDriveLab/OpenLane-V2/) | :heavy_check_mark: [F1-Score](https://github.com/OpenDriveLab/OpenLane) |  
+| Depth Estimation |  :heavy_check_mark: [SILog](https://www.cvlibs.net/datasets/kitti/eval_depth.php?benchmark=depth_prediction)| :heavy_check_mark: [Abs Rel](https://arxiv.org/abs/2204.03636)| - |
+| Visual Odometry |  :heavy_check_mark: [Translation](https://www.cvlibs.net/datasets/kitti/eval_odometry.php)| |  - |  -   |
+| Flow Estimation |  :heavy_check_mark: [Fl-all](https://www.cvlibs.net/datasets/kitti/eval_scene_flow.php?benchmark=flow) |  - | :heavy_check_mark: [EPE](https://waymo.com/open/challenges/2022/occupancy-flow-prediction-challenge/) |
+| 3D Lane Detection | - |:heavy_check_mark: [mAP](https://github.com/OpenDriveLab/OpenLane-V2/) | :heavy_check_mark: [F1-Score](https://github.com/OpenDriveLab/OpenLane) |  
 
 </center>
 

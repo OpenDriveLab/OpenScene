@@ -97,6 +97,9 @@ To highlight, we build OpenScene on top of [nuPlan](https://www.nuscenes.org/nup
 
 </center>
 
+> We will release full semantic labels of grids in future updates for boosting open-vocabulary detection.
+
+
 <!---
 We consider occupancy as a unified representation for various sub-tasks within autonomous driving perception, general scene understanding, and embodied robotics.
 The released OpenScene is the largest dataset with occupancy representation.
@@ -108,13 +111,13 @@ The pre-training of occupancy detection tasks on massive datasets is expected to
 
 
 What kind of modeling is needed for autonomous driving scenarios to meet the demands of planning-oriented perception?
+We posit that incorporating the motion information of **occupancy flow** can help bridge the gap between `decision-making` and `scene representation`.
+Besides, the OpenScene dataset provides a semantic label for each foreground grid, serving as a crucial initial step towards achieving [DriveAGI](https://github.com/OpenDriveLab/DriveAGI). 
 <!---
 Previous occupancy datasets were annotated in a static scene. 
 However, in practical applications, static occupancy data cannot support vehicle route planning due to the lack of instance motion information. Therefore, **occupancy flow** data is indispensable.
 --->
-We posit that incorporating the motion information of **occupancy flow** can help bridge the gap between `decision-making` and `scene representation`.
-Besides, the OpenScene dataset provides semantic labels for each foreground grid. 
-We will add semantic labels of background grids in future updates for boosting open-vocabulary detection.
+<!---We will add semantic labels of background grids in future updates for boosting open-vocabulary detection.--->
 
 <!---
 ### Explore the World Fully: Recognizing Scenarios with Semantic Labels
@@ -159,7 +162,7 @@ We will add semantic labels for background grids in future updates.
 | Duration | 15910 logs, 120+ hours |
 | Scenario categories | Dynamics: 5 types (e.g. high lateral acceleration) <br>  Interaction: 18 types (e.g. waiting for pedestrians to cross) <br> Zone: 8 types (e.g. on pickup-dropoff area) <br> Maneuver: 22 types (e.g. unprotected cross turn) <br>  Behavior: 22 types (e.g. stopping at a traffic light with a lead vehicle ahead) |
 | Tracks| Frequency of tracks/ego: 20hz <br> Average length of tracks: 9.64s |
-|Object classes| Vehicle, Bicycle, Pedestrian, Traffic cone, Barrier, Construction zone sign, Generic object |
+|Foreground classes| Vehicle, Bicycle, Pedestrian, Traffic cone, Barrier, Construction zone sign, Generic object |
 | Split | Trainval (1310 logs), Test (147 logs), Mini (64 logs) |
 | Voxel | Range: [-50m, -50m, -4m, 50m, 50m, 4m]; Size: 0.5m |
 <!---| Scenarios |  Total unique scenario types |--->

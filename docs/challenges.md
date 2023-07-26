@@ -19,7 +19,7 @@ We provide the full occupancy data of nuPlan, and participants are required to e
 - Participants are required to submit the pre-trained backbone (ResNet-101 / VoVNet-99).
 - The use of additional data is not permitted.
 
-### Evaluation Metric
+ **Evaluation Metric**
 
 <center>
   
@@ -35,5 +35,16 @@ We provide the full occupancy data of nuPlan, and participants are required to e
 | Flow Estimation |  :heavy_check_mark: [Fl-all](https://www.cvlibs.net/datasets/kitti/eval_scene_flow.php?benchmark=flow) |  - | :heavy_check_mark: [EPE](https://waymo.com/open/challenges/2022/occupancy-flow-prediction-challenge/) |
 | 3D Lane Detection | - |:heavy_check_mark: [mAP](https://github.com/OpenDriveLab/OpenLane-V2/) | :heavy_check_mark: [F1-Score](https://github.com/OpenDriveLab/OpenLane) |  
 </center>
+
+**Specific Models**
+
+ToDo
+
+**Submit**
+
+ToDo
+
+Using Compass
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>

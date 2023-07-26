@@ -29,7 +29,19 @@
 > - [CVPR 2023 Autonomous Driving Challenge - Occupancy Track](https://github.com/CVPR2023-3D-Occupancy-Prediction/CVPR2023-3D-Occupancy-Prediction)
 > - Point of contact: [contact@opendrivelab.com](mailto:contact@opendrivelab.com)
 
+## Grad-and-Go
 
+- **`[07/21]`** OpenScene `v1.0` released
+
+## Table of Contents
+- [Grad-and-Go](#grad-and-go)
+- [Fact Sheet](#fact-sheet)
+- [Task and Evaluation Metric](#task-and-evaluation-metric)
+- [Ecosystem and Leaderboard](#ecosystem-and-leaderboard)
+- [Getting Started](#getting-started)
+- [ToDo](#todo)
+- [License and Citation](#license-and-citation)
+- [Related resources](#related-resources)
 
 ## Highlights
 
@@ -50,20 +62,7 @@ Compared to the formulation of `3D bounding box` and `BEV segmentation`,  3D occ
 ### :fire: Scale Up Data: A Massive Dataset for Visual Pre-Training and [DriveAGI](https://github.com/OpenDriveLab/DriveAGI)
 
 
-Comparison to prevailing benchmarks in the wild: 
 
-
-
-|  Dataset  |      Sensor Data (hr)     | Scans | Annotation Fames |  Sensor Configuration | Annotation Label | Ecosystem |
-|:---------:|:--------------------:|:---------:|:-------------:|:------:|:--------------------------------------------:|:----------------:|
-| [KITTI](https://www.cvlibs.net/datasets/kitti/index.php)  |           1.5  |  15k | 15k         | 1L 2C    | 3D box, segmentation, depth, flow | Leaderboard |
-| [Waymo](https://waymo.com/open/)   |             6.4  |  230k | 230k   | 5L 5C    | 3D box  | Challenge |
-| [nuScenes](https://www.nuscenes.org/)   |             5.5  |  390k | 40k  | 1L 6C  | 3D box, LiDAR segmentation  | Leaderboard |
-| [ONCE](https://once-for-auto-driving.github.io/)   |            144  |  1M | 15k | 1L 7C  | 3D box  | - |
-| [BDD100k](https://www.vis.xyz/bdd100k/)   |            1000  |  100k | 100k| 1C  | 2D lane :cry:  | - |
-| **OpenScene** |          **:boom: 120**  |  **:boom: 40M** |  **:boom: 4M** | 5L 8C  | Occupancy | Leaderboard Challenge Workshop |
-
-> L: LiDAR, C: Camera
 
 **OpenScene: The Largest Dataset for Occupancy**
 
@@ -74,7 +73,7 @@ To highlight, we build OpenScene on top of [nuPlan](https://www.nuscenes.org/nup
 
 <center>
   
-|  Dataset  | Original Database |      Sensor Data (hr)    |   Sweeps  | Flow | Semantic Classes                               |
+|  Dataset  | Original Database |      Sensor Data (hr)    |   Sweep  | Flow | Semantic Classes                               |
 |:---------:|:-----------------:|:--------------------:|:-------------:|:------:|:--------------------------------------------:|
 | [MonoScene](https://github.com/astra-vision/MonoScene)  |      NYUv2/SemanticKITTI     | 4.1  |  1 | :x:     | 19   |
 | [Occ3D](https://github.com/FANG-MING/occupancy-for-nuscenes/tree/main)   |      nuScenes     | 5.5  |  10 | :x:    | 16  |
@@ -87,7 +86,9 @@ To highlight, we build OpenScene on top of [nuPlan](https://www.nuscenes.org/nup
 
 </center>
 
-> We will release full semantic labels of grids in future updates for boosting open-vocabulary detection.
+> Sweep: 
+> Flow: 
+> X: We will release full semantic labels of grids in future updates for boosting open-vocabulary detection.
 
 
 <!---
@@ -125,41 +126,8 @@ We will add semantic labels for background grids in future updates.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-## Table of Contents
-- [Grad-and-Go](#grad-and-go)
-- [Fact Sheet](#fact-sheet)
-- [Task and Evaluation Metric](#task-and-evaluation-metric)
-- [Ecosystem and Leaderboard](#ecosystem-and-leaderboard)
-- [Getting Started](#getting-started)
-- [ToDo](#todo)
-- [License and Citation](#license-and-citation)
-- [Related resources](#related-resources)
-
-## Grad-and-Go
-
-- **`[07/21]`** OpenScene `v1.0` released
 
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-## Fact Sheet
-
-<center>
-
-|  Type  | Info | 
-|:---------:|:-----------------|
-| Location | Las Vegas (64%), Singapore (15%), Pittsburgh (12%), Boston (9%) |
-| Duration | 15910 logs, 120+ hours |
-| Scenario categories | Dynamics: 5 types (e.g. high lateral acceleration) <br>  Interaction: 18 types (e.g. waiting for pedestrians to cross) <br> Zone: 8 types (e.g. on pickup-dropoff area) <br> Maneuver: 22 types (e.g. unprotected cross turn) <br>  Behavior: 22 types (e.g. stopping at a traffic light with a lead vehicle ahead) |
-| Tracks| Frequency of tracks/ego: 20hz <br> Average length of tracks: 9.64s |
-|Foreground classes| Vehicle, Bicycle, Pedestrian, Traffic cone, Barrier, Construction zone sign, Generic object |
-| Split | Trainval (1310 logs), Test (147 logs), Mini (64 logs) |
-| Voxel | Range: [-50m, -50m, -4m, 50m, 50m, 4m]; Size: 0.5m |
-<!---| Scenarios |  Total unique scenario types |--->
-
-</center>
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Task and Evaluation Metric
 

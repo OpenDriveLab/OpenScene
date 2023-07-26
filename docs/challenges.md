@@ -19,5 +19,21 @@ We provide the full occupancy data of nuPlan, and participants are required to e
 - Participants are required to submit the pre-trained backbone (ResNet-101 / VoVNet-99).
 - The use of additional data is not permitted.
 
+### Evaluation Metric
+<center>
+
+| Doenstream Tasks | KITTI | nuScenes | Waymo | Metrics |
+|:---------:|:---------:|:---------:|:---------------:|:-------------:|
+| 3D Detection |  :heavy_check_mark:| :heavy_check_mark:| :heavy_check_mark:  |   mAP  |
+| Semantic Segmantation |  :heavy_check_mark:| :heavy_check_mark:|   |   mIoU  |
+| Scene Completion |  :heavy_check_mark:| :heavy_check_mark:|   |   mIoU  |
+| Map Generation |  | :heavy_check_mark:|   |   mIoU  |
+| Object Tracking | :heavy_check_mark: | :heavy_check_mark:|   |   [HOTA](https://link.springer.com/article/10.1007/s11263-020-01375-2)  |
+| Depth Estimation |  :heavy_check_mark:| :heavy_check_mark:| :heavy_check_mark:  |   [SILog](https://www.cvlibs.net/datasets/kitti/eval_depth.php?benchmark=depth_prediction)  |
+| Visual Odometry |  :heavy_check_mark:| |   |   [Translation](https://www.cvlibs.net/datasets/kitti/eval_odometry.php)  |
+| Flow Estimation |  :heavy_check_mark:| |  |   [Fl-all](https://www.cvlibs.net/datasets/kitti/eval_scene_flow.php?benchmark=flow)  |
+| 3D Lane Detection |  | :heavy_check_mark: |  |   mAP  |
+
+</center>
 
 <p align="right">(<a href="#top">back to top</a>)</p>

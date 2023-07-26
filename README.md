@@ -53,16 +53,6 @@ Compared to the formulation of `3D bounding box` and `BEV segmentation`,  3D occ
 Comparison to prevailing benchmarks in the wild: 
 
 
-<!---
-|  Dataset  |      Raw Data      |   Annotation Duration  |Sensor Configuration| Annotation Label | 
-|:---------:|:--------------------:|:-------------:|:------:|:--------------------------------------------:|
-| [KITTI](https://www.cvlibs.net/datasets/kitti/index.php)  |           1.5h  |  1.5h | 1 LiDAR, 2 cameras    | 3D box, segmentation, depth, flow |
-| [Waymo](https://waymo.com/open/)   |             6.4h  |  6.4h | 5 LiDARs, 5 cameras    | 3D box  |
-| [nuScenes](https://www.nuscenes.org/)   |             5.5h  |  5.5h | 1 LiDARs, 6 cameras  | 3D box, LiDAR segmentation  |
-| [ONCE](https://once-for-auto-driving.github.io/)   |            144h  |  2.2h | 1 LiDARs, 7 cameras  | 3D box  |
-| ~~[BDD100k](https://www.vis.xyz/bdd100k/)~~   |            1000h  |  1000h | 1 camera  | 2D lane :cry:  |
-| **OpenScene** |          **:boom: 1200h**  |  **:boom: 120h** | 5 LiDARs, 8 cameras  | Occupancy |
---->
 
 |  Dataset  |      Sensor Data (hr)     | Scans | Annotation Fames |  Sensor Configuration | Annotation Label | Ecosystem |
 |:---------:|:--------------------:|:---------:|:-------------:|:------:|:--------------------------------------------:|:----------------:|

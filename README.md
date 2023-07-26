@@ -135,10 +135,8 @@ The pre-training of occupancy detection tasks on massive data is expected to ben
 ### Task 1: Large-Scale Occupancy Prediction
 
 
-
-
-
-The pre-training task is defined as occupancy prediction by the intersection-over-union (**mIoU**) over all classes. 
+Given massive images from multiple cameras in OpenScene, the goal is to predict the current occupancy state and semantics of each voxel grid in the scene.
+In this task, we use the intersection-over-union (**mIoU**) over all classes to evaluate model performance.
 
 Let $C$ be the number of classes. 
 
@@ -149,11 +147,12 @@ $$
 where $TP_c$, $FP_c$, and $FN_c$ correspond to the number of true positive, false positive, and false negative predictions for class $c_i$.
 
 
+
 ### Task 2: All-in-One Model Verification with Diverse Downstream Tasks
 
-
+<!---
 After pre-training, the fine-tuning stage allows for diverse downstream tasks to be defined on various datasets.
-
+--->
 
 
 <!---
@@ -169,6 +168,11 @@ After pre-training, the fine-tuning stage allows for diverse downstream tasks to
 | Flow Estimation |  :heavy_check_mark: [Fl-all](https://www.cvlibs.net/datasets/kitti/eval_scene_flow.php?benchmark=flow) |  - | :heavy_check_mark: [EPE](https://waymo.com/open/challenges/2022/occupancy-flow-prediction-challenge/) |
 | 3D Lane Detection | - |:heavy_check_mark: [mAP](https://github.com/OpenDriveLab/OpenLane-V2/) | :heavy_check_mark: [F1-Score](https://github.com/OpenDriveLab/OpenLane) |  
 --->
+
+
+Given multi-view images and occupancy annotations from OpenScene, a unified visual backbone is required to effectively address multifaceted downstream tasks.
+The OpenScene Metric (OSM) is utilized to summarize model performance in all aspects.
+
 
 <center>
 
@@ -196,10 +200,11 @@ We plan to release a trailer version of the upcoming challenge. Please stay tune
 - Challenge Page: [Private-AD24](/docs/challenge.md) (TBA)
 
 
-### CVPR 2023 3D Occupancy Prediction Challenge (Server remains `active`)
+### CVPR 2023 3D Occupancy Prediction Challenge (Server Remains `Active`)
 
+<!---
 Given images from multiple cameras, the goal is to predict the current occupancy state and semantics of each voxel grid in the scene. The voxel state is predicted to be either free or occupied. If a voxel is occupied, its semantic class needs to be predicted, as well. Besides, we also provide a binary observed/unobserved mask for each frame. An observed voxel is defined as an invisible grid in the current camera observation, which is ignored in the evaluation stage.
-
+--->
 
 - Challenge website: [AD23Challenge](https://opendrivelab.com/AD23Challenge.html#Track3)
 

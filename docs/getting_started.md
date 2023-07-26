@@ -1,4 +1,8 @@
-# Download Data
+# Prerequisites
+
+**Please ensure you have prepared the environment and the Openscene dataset.**
+
+## Download Data
 
 
 ### Download-ToDo
@@ -13,7 +17,7 @@ The files mentioned below can also be downloaded via <img src="https://user-imag
 * Mini and trainval data contain three parts -- `imgs`, `gts` and `annotations`. The `imgs` datas have the same hierarchy with the image samples in the original nuScenes dataset.
 
 
-# Install Devkit
+## Install Devkit
 
 ### Development Kit-ToDo
 
@@ -22,16 +26,14 @@ We provide a baseline model based on [OccNet](https://github.com/OpenDriveLab/Oc
 Please refer to [getting_started](docs/getting_started.md) for details.
 
 
-# Prepare Dataset
+## Prepare Dataset
 
-# Train a Model
+## Train a Model
 
 
-# Prerequisites
 
-**Please ensure you have prepared the environment and the nuScenes dataset.**
 
-# Train and Test
+## Train and Test
 
 Train BEVFormer with 8 GPUs 
 ```
@@ -46,7 +48,7 @@ Note: using 1 GPU to eval can obtain slightly higher performance because continu
 
 
 
-# Using FP16 to train the model.
+## Using FP16 to train the model.
 The above training script can not support FP16 training, 
 and we provide another script to train BEVFormer with FP16.
 
@@ -55,6 +57,6 @@ and we provide another script to train BEVFormer with FP16.
 ```
 
 
-# Visualization 
+## Visualization 
 
 see [visual.py](../tools/analysis_tools/visual.py)

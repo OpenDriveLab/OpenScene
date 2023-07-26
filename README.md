@@ -73,7 +73,7 @@ To highlight, we build OpenScene on top of [nuPlan](https://www.nuscenes.org/nup
 
 <center>
   
-|  Dataset  | Original Database |      Sensor Data (hr)    |   Sweep  | Flow | Semantic Classes                               |
+|  Dataset  | Original Database |      Sensor Data (hr)    |   Sweep  | Flow | Semantic Category                               |
 |:---------:|:-----------------:|:--------------------:|:-------------:|:------:|:--------------------------------------------:|
 | [MonoScene](https://github.com/astra-vision/MonoScene)  |      NYUv2/SemanticKITTI     | 4.1  |  1 | :x:     | 19   |
 | [Occ3D](https://github.com/FANG-MING/occupancy-for-nuscenes/tree/main)   |      nuScenes     | 5.5  |  10 | :x:    | 16  |
@@ -86,9 +86,9 @@ To highlight, we build OpenScene on top of [nuPlan](https://www.nuscenes.org/nup
 
 </center>
 
-> Sweep: 
-> Flow: 
-> X: We will release full semantic labels of grids in future updates for boosting open-vocabulary detection.
+> - Sweep: the number of LiDAR frames accumulated for occupancy generation.
+> - Flow: the annotation of motion direction and velocity for each occupancy grid.
+> - X: we will release full semantic labels of grids in future updates for boosting open-vocabulary detection.
 
 
 <!---

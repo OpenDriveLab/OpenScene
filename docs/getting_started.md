@@ -23,38 +23,25 @@ The files mentioned below can also be downloaded via <img src="https://user-imag
 
 We provide a baseline model based on [OccNet](https://github.com/OpenDriveLab/OccNet).
 
-Please refer to [getting_started](docs/getting_started.md) for details.
+Please refer to [DriveEngine](https://github.com/OpenDriveLab/DriveEngine/tree/main) for details.
 
 
 ## Prepare Dataset
-
-## Train a Model
-
 
 
 
 ## Train and Test
 
-Train BEVFormer with 8 GPUs 
+Train model with 8 GPUs 
 ```
-./tools/dist_train.sh ./projects/configs/bevformer/bevformer_base.py 8
+./tools/dist_train.sh ./projects/configs/bevformer/bev_tiny_occ_r50_nuplan.py 8
 ```
 
-Eval BEVFormer with 8 GPUs
+Eval model with 8 GPUs
 ```
-./tools/dist_test.sh ./projects/configs/bevformer/bevformer_base.py ./path/to/ckpts.pth 8
+./tools/dist_test.sh ./projects/configs/bevformer/bev_tiny_occ_r50_nuplan.py ./path/to/ckpts.pth 8
 ```
 Note: using 1 GPU to eval can obtain slightly higher performance because continuous video may be truncated with multiple GPUs. By default we report the score evaled with 8 GPUs.
-
-
-
-## Using FP16 to train the model.
-The above training script can not support FP16 training, 
-and we provide another script to train BEVFormer with FP16.
-
-```
-./tools/fp16/dist_train.sh ./projects/configs/bevformer_fp16/bevformer_tiny_fp16.py 8
-```
 
 
 ## Visualization 

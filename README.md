@@ -21,7 +21,7 @@
 </div>
 
 
-> - [Medium Blog](https://medium.com/@opendrivelab/introducing-openscene-the-largest-benchmark-for-occupancy-prediction-in-autonomous-driving-74cfc5bbe7b6) | [Zhihu.com]() (in Chinese)
+> - [Medium Blog](https://medium.com/@opendrivelab/introducing-openscene-the-largest-benchmark-for-occupancy-prediction-in-autonomous-driving-74cfc5bbe7b6) | [Zhihu](https://zhuanlan.zhihu.com/p/647953862) (in Chinese)
 > - [CVPR 2023 Autonomous Driving Challenge - Occupancy Track](https://opendrivelab.com/AD23Challenge.html#3d_occupancy_prediction)
 > - Point of contact: [contact@opendrivelab.com](mailto:contact@opendrivelab.com)
 

@@ -184,7 +184,7 @@ We plan to release a trailer version of the upcoming challenge. Please stay tune
 - Please submit your great work as we would **`regularly`** maintain this leaderboard!
 - Challenge website: [AD23Challenge](https://opendrivelab.com/AD23Challenge.html#3d_occupancy_prediction)
 
-![Leaderboard](https://github.com/OpenDriveLab/OpenScene/assets/29263416/b5407380-be98-42f6-a7a8-447e84676121)
+![Leaderboard](https://github.com/OpenDriveLab/OpenScene/assets/29263416/8399ea67-d61e-41a7-a014-4735986abccc)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

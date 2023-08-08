@@ -208,8 +208,11 @@ We plan to release a trailer version of the upcoming challenge. Please stay tune
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
+
 ## License and Citation
-All assets (including figures and data) and code are under the [Apache 2.0 license](./LICENSE) unless specified otherwise.
+> Our dataset is based on the [nuPlan Dataset](https://www.nuscenes.org/nuplan) and therefore we distribute the data under [Creative Commons Attribution-NonCommercial-ShareAlike](https://creativecommons.org/licenses/by-nc-sa/4.0/) license and [nuPlan Dataset License Agreement for Non-Commercial Use](https://www.nuscenes.org/terms-of-use). You are free to share and adapt the data, but have to give appropriate credit and may not use the work for commercial purposes.
+All code within this repository is under [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
 Please consider citing our paper if the project helps your research with the following BibTex:
 
 ```bibtex

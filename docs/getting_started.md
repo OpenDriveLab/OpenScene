@@ -28,13 +28,12 @@ We recommended to download from [**OpenDriveLab**](https://openxlab.org.cn/datas
 
 | Subset  |Google Drive<img src="https://ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png" alt="Google Drive" width="18"/> | Baidu Cloud<img src="https://nd-static.bdstatic.com/m-static/v20-main/favicon-main.ico" alt="Baidu Yun" width="18"/> | Approx. Size |
 | :---: |  :---: | :---: | :---: |
-| mini |  [image](https://drive.google.com/drive/folders/1sWCpfQiAjOf2e9D3O3R2gJz5e9MXNArI?usp=drive_link) / [label](https://drive.google.com/drive/folders/16xjIgfaIiUq34aU3Qev9pVCDCk90HoEu?usp=drive_link) |  [image](https://pan.baidu.com/s/1ZW5oV4JmKFwtO9ciTC-sBA?pwd=qx9x) / [label](https://pan.baidu.com/s/1HKeDR-qRKpxOAhjesSMjyQ?pwd=ek5j) |  81.2G / 6.7G |
+| mini |  [image](https://drive.google.com/drive/folders/1sWCpfQiAjOf2e9D3O3R2gJz5e9MXNArI?usp=drive_link) / [label](https://drive.google.com/drive/folders/16xjIgfaIiUq34aU3Qev9pVCDCk90HoEu?usp=drive_link) |  [image](https://pan.baidu.com/s/15nF043xirjZnrOm9qgLh8w?pwd=hksj) / [label](https://pan.baidu.com/s/1HKeDR-qRKpxOAhjesSMjyQ?pwd=ek5j) |  81.2G / 6.7G |
 | trainval  |  [image](https://drive.google.com/drive/folders/1kwPMvECZbyWx1AsVLNLP9sLNYQIvScki?usp=drive_link) / [label](https://drive.google.com/drive/folders/1rtMG5gfqL7T7aV06awEa0oyjgGd5q2bI?usp=drive_link) |  [image](https://pan.baidu.com/s/1ZW5oV4JmKFwtO9ciTC-sBA?pwd=qx9x) / [label](https://pan.baidu.com/s/1_WW6spKo_Ru_0ge9SCuOQg?pwd=j6qn) |  1.1T / 95.4G |
 | test |  [image](https://drive.google.com/drive/folders/1VUapdlwKRRVl7rh6XLUC9ekLja-EHC4R?usp=drive_link)   |  [image](https://pan.baidu.com/s/1kUKzYszyoRyZj-2m4uCiTw?pwd=8hxs) | 118.5G |
 | meta data | [meta file](https://drive.google.com/drive/folders/1kf_qkvXQ2gT4o8JBd5fQL4_2CtApnbOF?usp=drive_link) |  [meta file](https://pan.baidu.com/s/1MxtbNvzZO_NsuYvPGPwwAA?pwd=kwbz) | 6.4G |
 
 > - Mini and trainval data contain three parts -- `sensor_blobs (images)`, `meta_data`, and `occupancy (label)`.
-> - We are uploading the dataset to Google Drive and Baidu Cloud now, it is supposed to be done before **`[08/11]`**.
 
 To ensure the integrity of the downloaded data, we recommend verifying the file using its [MD5 checksum](https://drive.google.com/file/d/1B9E43icOc16AhzHU33_RBsgVIfhoNgRI/view?usp=drive_link) after the download is complete.
 

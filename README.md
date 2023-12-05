@@ -217,10 +217,17 @@ Please consider citing our paper if the project helps your research with the fol
 
 ```bibtex
 @misc{openscene2023,
-      author = {OpenScene Contributors},
       title = {OpenScene: The Largest Up-to-Date 3D Occupancy Prediction Benchmark in Autonomous Driving},
-      url = {https://github.com/OpenDriveLab/OpenScene},
+      author = {OpenScene Contributors},
+      howpublished={\url{https://github.com/OpenDriveLab/OpenScene}},
       year = {2023}
+}
+
+@misc{drivelm2023,
+  title={DriveLM: Drive on Language},
+  author={DriveLM Contributors},
+  howpublished={\url{https://github.com/OpenDriveLab/DriveLM}},
+  year={2023}
 }
 
 @article{sima2023_occnet,

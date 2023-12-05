@@ -223,13 +223,6 @@ Please consider citing our paper if the project helps your research with the fol
       year = {2023}
 }
 
-@misc{drivelm2023,
-  title={DriveLM: Drive on Language},
-  author={DriveLM Contributors},
-  howpublished={\url{https://github.com/OpenDriveLab/DriveLM}},
-  year={2023}
-}
-
 @article{sima2023_occnet,
       title={Scene as Occupancy}, 
       author={Chonghao Sima and Wenwen Tong and Tai Wang and Li Chen and Silei Wu and Hanming Deng  and Yi Gu and Lewei Lu and Ping Luo and Dahua Lin and Hongyang Li},

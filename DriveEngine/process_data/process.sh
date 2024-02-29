@@ -13,7 +13,7 @@ export NUPLAN_SENSOR_PATH=${NUPLAN_PATH}/sensor_blobs
 export NUPLAN_MAP_VERSION=nuplan-maps-v1.0
 export NUPLAN_MAPS_ROOT=/path/to/nuplan/dataset/maps
 
-OUT_DIR=./openscene-v1.1/meta_datas/{split}
+OUT_DIR=./openscene-v1.1/meta_datas/${split}
 
 python create_openscene_metadata.py \
   --nuplan-root-path ${NUPLAN_PATH} \
@@ -22,5 +22,5 @@ python create_openscene_metadata.py \
   --nuplan-map-version ${NUPLAN_MAP_VERSION} \
   --nuplan-map-root ${NUPLAN_MAPS_ROOT} \
   --out-dir ${OUT_DIR} \
-  --split trainval \
+  --split ${split} \
   --thread-num 32

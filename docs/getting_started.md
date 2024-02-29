@@ -1,32 +1,51 @@
 # Getting Started
 
-
-
-## Download Data
-
-
 The OpenScene dataset is a large-scale dataset for visual pretraining in the field of autonomous driving.
 Based on [nuPlan](https://www.nuscenes.org/nuplan), we provide occupancy detection and flow annotations in 3D space.
 **Download now to discover our dataset!**
 
+## OpenScene v1.1
 
-<!---
-| Subset | OpenDriveLab<img src="https://github.com/OpenDriveLab/OpenLane-V2/assets/29263416/4cfa0f7f-535c-40fa-9fca-81276683931d" alt="OpenDriveLab" width="18"/> |Google Drive<img src="https://ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png" alt="Google Drive" width="18"/> | Baidu Cloud<img src="https://nd-static.bdstatic.com/m-static/v20-main/favicon-main.ico" alt="Baidu Yun" width="18"/> | Approx. Size |
-| :---: | :---: | :---: | :---: | :---: |
-| mini | log / [image]() / [occupancy]() | `TBA` | `TBA` | 8G / 82G / 6.7G |
-| trainval  | log / [image]() / [occupancy]() | `TBA` | `TBA` | 107G / 1.1T / 95.4G |
-| test | log / [image]() / [occupancy]() | `TBA` | `TBA` | 7.4G / 119G / 11G |
-| metadata | link | `TBA` | `TBA` | 6.4G |
+### :fire: Change Log
+- We reorganized the meta data files and divided it by nuPlan log file to improve accessibility.
+- We supplemented more logs that have sensor data.
+- We further uploaded the LiDAR raw sensor data.
 
-> - Mini and trainval data contain three parts -- `sensor_blobs (images)`, `splits (logs)`, and `occupancy`. The `sensor_blobs` data has the same hierarchy as the samples in the original nuPlan dataset.
+### Download Data
+We recommended to download from [**OpenDriveLab**](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene)<img src="https://github.com/OpenDriveLab/OpenLane-V2/assets/29263416/4cfa0f7f-535c-40fa-9fca-81276683931d" alt="OpenDriveLab" width="18"/> and use provided **command line interface (CLI)** for acceleration. 
 
-It is recommended to download from [OpenDriveLab](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene)<img src="https://github.com/OpenDriveLab/OpenLane-V2/assets/29263416/4cfa0f7f-535c-40fa-9fca-81276683931d" alt="OpenDriveLab" width="18"/> and use provided [command line interface](https://opendatalab.com/CVPR2023-3D-Occupancy/cli) for acceleration.
---->
+Additionally, we provide download link from Amazon AWS S3.
 
+#### Subset mini
+
+| File Name  | Amazon AWS S3 | Approx. Size |
+| :---: |  :---: | :---: |
+| openscene_metadata_mini.tgz | [Asia](https://opendrivelab-openscene.s3.ap-southeast-1.amazonaws.com/openscene-v1.1/openscene_metadata_mini.tgz) | 509.6MB |
+| openscene_sensor_mini_camera.tgz | [Asia](https://opendrivelab-openscene.s3.ap-southeast-1.amazonaws.com/openscene-v1.1/openscene_sensor_mini_camera.tgz) | 83.9GB |
+| openscene_sensor_mini_lidar.tgz | [Asia](https://opendrivelab-openscene.s3.ap-southeast-1.amazonaws.com/openscene-v1.1/openscene_sensor_mini_lidar.tgz) | 59.1GB |
+
+#### Subset trainval
+
+| File Name  | Amazon AWS S3 | Approx. Size |
+| :---: |  :---: | :---: |
+| openscene_metadata_trainval.tgz | [Asia](https://opendrivelab-openscene.s3.ap-southeast-1.amazonaws.com/openscene-v1.1/openscene_metadata_trainval.tgz) | 6.6GB |
+
+The rest files are uploading.
+
+#### Subset test
+
+| File Name  | Amazon AWS S3 | Approx. Size |
+| :---: |  :---: | :---: |
+| openscene_metadata_test.tgz | [Asia](https://opendrivelab-openscene.s3.ap-southeast-1.amazonaws.com/openscene-v1.1/openscene_metadata_test.tgz) | 31.3MB |
+The rest files are uploading.
+
+## OpenScene v1.0
+
+### Download Data
 
 We recommended to download from [**OpenDriveLab**](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene)<img src="https://github.com/OpenDriveLab/OpenLane-V2/assets/29263416/4cfa0f7f-535c-40fa-9fca-81276683931d" alt="OpenDriveLab" width="18"/> and use provided **command line interface (CLI)** for acceleration. In addition, Google Drive<img src="https://ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png" alt="Google Drive" width="18"/> and Baidu Cloud<img src="https://nd-static.bdstatic.com/m-static/v20-main/favicon-main.ico" alt="Baidu Yun" width="18"/> are also available. If you already have the nuPlan dataset, you only need to download the `label` and `meta data`.
 
-| Subset  |Google Drive<img src="https://ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png" alt="Google Drive" width="18"/> | Baidu Cloud<img src="https://nd-static.bdstatic.com/m-static/v20-main/favicon-main.ico" alt="Baidu Yun" width="18"/> | Approx. Size |
+| Subset  | Google Drive<img src="https://ssl.gstatic.com/docs/doclist/images/drive_2022q3_32dp.png" alt="Google Drive" width="18"/> | Baidu Cloud<img src="https://nd-static.bdstatic.com/m-static/v20-main/favicon-main.ico" alt="Baidu Yun" width="18"/> | Approx. Size |
 | :---: |  :---: | :---: | :---: |
 | mini |  [image](https://drive.google.com/drive/folders/1sWCpfQiAjOf2e9D3O3R2gJz5e9MXNArI?usp=drive_link) / [label](https://drive.google.com/drive/folders/16xjIgfaIiUq34aU3Qev9pVCDCk90HoEu?usp=drive_link) |  [image](https://pan.baidu.com/s/15nF043xirjZnrOm9qgLh8w?pwd=hksj) / [label](https://pan.baidu.com/s/1HKeDR-qRKpxOAhjesSMjyQ?pwd=ek5j) |  81.2G / 6.7G |
 | trainval  |  [image](https://drive.google.com/drive/folders/1kwPMvECZbyWx1AsVLNLP9sLNYQIvScki?usp=drive_link) / [label](https://drive.google.com/drive/folders/1rtMG5gfqL7T7aV06awEa0oyjgGd5q2bI?usp=drive_link) |  [image](https://pan.baidu.com/s/1ZW5oV4JmKFwtO9ciTC-sBA?pwd=qx9x) / [label](https://pan.baidu.com/s/1_WW6spKo_Ru_0ge9SCuOQg?pwd=j6qn) |  1.1T / 95.4G |
@@ -37,7 +56,7 @@ We recommended to download from [**OpenDriveLab**](https://openxlab.org.cn/datas
 
 To ensure the integrity of the downloaded data, we recommend verifying the file using its [MD5 checksum](https://drive.google.com/file/d/1B9E43icOc16AhzHU33_RBsgVIfhoNgRI/view?usp=drive_link) after the download is complete.
 
-## Prepare Dataset
+### Prepare Dataset
 
 Please follow the steps below to get familiar with the OpenScene dataset.
 

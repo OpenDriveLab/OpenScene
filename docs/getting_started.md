@@ -11,7 +11,7 @@ Based on [nuPlan](https://www.nuscenes.org/nuplan), we provide occupancy detecti
 - We supplemented more logs that have sensor data.
 - We further uploaded the LiDAR raw sensor data.
 
-### :blow: Must Read for the CVPR 2024 Challenge
+### :exclamation: Must Read for the CVPR 2024 Challenge
 
 - For Track **End-to-End Driving at Scale**, please download the `meta_data` and the `camera` sensor data.
 - For Track **Predictive World Model**, please download the `meta_data`, the `camera` and `LiDAR` sensor data.

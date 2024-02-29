@@ -30,8 +30,8 @@ Based on [nuPlan](https://www.nuscenes.org/nuplan), we provide occupancy detecti
 
 - :bell: For those who already possess the [nuPlan](https://www.nuscenes.org/nuplan) sensor data (over 20TB) locally, you have the option to directly link it to the OpenScene folder to avoid redundant downloads. We carefully make the folder structure aligned with nuPlan and just downsample the nuPlan sensor data to improve the accessibility.
 
-- If you already have the OpenScene v1.0 sensor data, you can use it for OpenScene v1.1 as well, since almost (>98%) all the data are present. There are only a few instances of additional data in v1.1 that are missing. You can temporarily ignore those frames during training.
-
+- If you already have the OpenScene v1.0 sensor data, you can use it for OpenScene v1.1 as well, since almost (>98%) all the data are present. If you want to use the occupancy label, please also download it from OpenScene v1.0. There are only a few instances of additional data in v1.1 that are missing. You can temporarily ignore those frames during training.
+ 
 #### mini set
 
 | File Name  | Amazon AWS S3 | Size |

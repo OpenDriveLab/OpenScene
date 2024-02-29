@@ -3,7 +3,7 @@
 
 # Autonomous Grand Challenge Toolkits
 
-**The toolkit of `End-to-End Driving` and `Predictive World Model` tracks for [CVPR 2024 Autonomous Grand Challenge](https://opendrivelab.com/challenge2024).**
+**The large-scale dataset of `End-to-End Driving` and `Predictive World Model` tracks for [CVPR 2024 Autonomous Grand Challenge](https://opendrivelab.com/challenge2024).**
 
 <p align="center">
   <img src="assets/challenge.jpeg" width="900px" >
@@ -27,6 +27,7 @@
 
 > - Official website: :globe_with_meridians: [AGC2024](https://opendrivelab.com/challenge2024/#end_to_end_driving_at_scale)
 > - Evaluation server: :hugs: [Hugging Face](https://huggingface.co/spaces/AGC2024-P/e2e-driving-2024)
+> - Develop Kit: :ringed_planet: [NAVSIM](https://github.com/autonomousvision/navsim)
 
 ### Brief Description
 Benchmarking sensorimotor driving policies with real data is challenging due to the limited scale of prior datasets and the misalignment between open- and closed-loop metrics. In this track, we use the large-scale OpenScene dataset and aim to bridge the gap between the two evaluation paradigms. Our Non-Reactive Autonomous Vehicle Simulation framework (NAVSim) gathers closed-loop metrics for end-to-end driving by unrolling simplified bird's eye view abstractions of scenes for a short simulation horizon. It operates under the condition that the policy has no influence on the environment, which enables efficient, open-loop metric computation while being better aligned with closed-loop evaluations than traditional displacement errors.

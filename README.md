@@ -1,65 +1,92 @@
 
 <div id="top" align="center">
 
-# OpenScene
+# Autonomous Grand Challenge Toolkits
 
-**The Largest 3D Occupancy Prediction Benchmark in Autonomous Driving**
+**The toolkit of `End-to-End Driving` and `Predictive World Model` tracks for CVPR 2024 challenge.**
 
-<a href="/docs/dataset_stats.md">
-  <img alt="OpenScene: v1.0" src="https://img.shields.io/badge/OpenScene-v1.0-blueviolet"/>
-</a>
-<a href="#license-and-citation">
-  <img alt="License: Apache2.0" src="https://img.shields.io/badge/license-Apache%202.0-blue.svg"/>
-</a>
+<p align="center">
+  <img src="assets/challenge.jpeg" width="900px" >
+</p>
+</div>
 
+## Table of Contents
 
+1. [Track: End-to-End Driving at Scale](#e2etrack)
+2. [Track: Predictive World Model](#worldmodel)
+3. [Dataset](#dataset)
+4. [License and Citation](#license-and-citation)
+5. [Related Resources](#resources)
 
+## End-to-End Driving at Scale <a name="e2etrack"></a>
+<div id="top" align="center">
+<p align="center">
+  <img src="assets/e2e_banner.png" width="900px" >
+</p>
+</div>
+### Brief Description
+Benchmarking sensorimotor driving policies with real data is challenging due to the limited scale of prior datasets and the misalignment between open- and closed-loop metrics. In this track, we use the large-scale OpenScene dataset and aim to bridge the gap between the two evaluation paradigms. Our Non-Reactive Autonomous Vehicle Simulation framework (NAVSim) gathers closed-loop metrics for end-to-end driving by unrolling simplified bird's eye view abstractions of scenes for a short simulation horizon. It operates under the condition that the policy has no influence on the environment, which enables efficient, open-loop metric computation while being better aligned with closed-loop evaluations than traditional displacement errors.
+
+## Track: Predictive World Model <a name="worldmodel"></a>
+<div id="top" align="center">
+<p align="center">
+  <img src="assets/pred_banner.png" width="900px" >
+</p>
+</div>
+
+- [Problem Formulation](#worldmodel-baseline)
+- [Evaluation: Chamfer Distance](#worldmodel-eval)
+- [Submission](#worldmodel-submission)
+
+Serving as an abstract spatio-temporal representation of reality, the world model can predict future states based on the current state. The learning process of world models has the potential to provide a pre-trained foundation model for autonomous driving. Given vision-only inputs, the neural network outputs point clouds in the future to testify its predictive capability of the world.
+
+### Problem Formulation <a name="worldmodel-baseline"></a>
+Given an visual observation of the world for the past 3 seconds, predict the point clouds in the future 3 seconds based on the designated
+future ego-vehicle pose. In other words,
+given historical images in 3 seconds and corresponding history ego-vehicle pose information (from -2.5s to 0s, 6 frames under 2 Hz),
+the participants are required to forecast future point clouds
+in 3 seconds (from 0.5s to 3s, 6 frames under 2Hz) with specified future ego-poses.
+
+All output point clouds should be aligned to the LiDAR coordinates of the ego-vehicle in the `n` timestamp, which spans a
+range of 1 to 6 given predicting 6 future frames.
+
+We then evaluate the predicted future point clouds by querying rays. We will provide a set of query rays for testing propose,
+and `the participants are required to estimate depth along each ray for rendering point clouds. An example of submission 
+will be provided soon.` Our evaluation toolkit will render
+point clouds according to ray directions and provided depths by participants, and compute chamfer distance for points within
+the range from -51.2m to 51.2m on the X- and Y-axis as the criterion.
+
+For more details, please refer to [ViDAR](https://github.com/OpenDriveLab/ViDAR).
+
+### Evaluation: Chamfer Distance <a name="worldmodel-eval"></a>
+Chamfer Distance is used for measuring the similarity of two point sets, which represent shapes or outlines of two scenens.
+It compares the similarity between predicted and ground-truth shapes by calculating the average nearest-neighbor distance between
+points in one set to points in the other set, and vice versa.
+
+For this challenge, we will compare chamfer distance between predicted point clouds and ground-truth point clouds for points
+within the range of -51.2m to 51.2m. Participants are required to provide depths of specified ray directions. Our evaluation
+system will render point clouds by ray directions and provided depth for chamfer distance evaluation.
+
+### Submission <a name="worldmodel-submission"></a>
+TBA
+
+## Dataset: OpenScene <a name="dataset"></a>
+
+<div id="top" align="center">
 <p align="center">
   <img src="assets/OpenScene.gif" width="900px" >
 </p>
-
 </div>
 
-
 > - [Medium Blog](https://medium.com/@opendrivelab/introducing-openscene-the-largest-benchmark-for-occupancy-prediction-in-autonomous-driving-74cfc5bbe7b6) | [Zhihu](https://zhuanlan.zhihu.com/p/647953862) (in Chinese)
-> - [CVPR 2023 Autonomous Driving Challenge - Occupancy Track](https://opendrivelab.com/AD23Challenge.html#3d_occupancy_prediction)
+> - [CVPR 2024 Autonomous Driving Challenge - Occupancy Track](https://opendrivelab.com/AD23Challenge.html#3d_occupancy_prediction)
 > - Point of contact: [contact@opendrivelab.com](mailto:contact@opendrivelab.com)
 
-## Grad-and-Go
-
-- **`[2023/08/04]`** OpenScene `v1.0` released
-
-## Table of Contents
-- [Highlights](#highlights)
-- [Task and Evaluation Metric](#task-and-evaluation-metric)
-- [Ecosystem and Leaderboard](#ecosystem-and-leaderboard)
-- [TODO](#todo)
-- [Getting Started](#getting-started)
-- [License and Citation](#license-and-citation)
-- [Related Resources](#related-resources)
-
-## Highlights
-
-
-### :oncoming_automobile: Representing 3D Scene as Occupancy
-
-
-
-As we quote from [OccNet](https://arxiv.org/abs/2306.02851):
-
->  **Occupancy** serves as a `general` representation of the scene and could facilitate perception and planning in the full-stack of autonomous driving. 3D Occupancy is a geometry-aware representation of the scene.
-
-Compared to the formulation of `3D bounding box` and `BEV segmentation`,  3D occupancy could capture the fine-grained details of critical obstacles in the driving scene.
-
-
-### :fire: OpenScene: The Largest Benchmark for 3D Occupancy Prediction
-
-
-Driving behavior on a sunny day does not apply to that in dancing snowflakes. For machine learning, data is the `must-have` food. 
-To highlight, we build OpenScene on top of [nuPlan](https://www.nuscenes.org/nuplan#challenge), covering a wide span of over **120 hours** of occupancy labels collected in various cities, from `Boston`, `Pittsburgh`, `Las Vegas` to `Singapore`.
+### Description
+OpenScene is the largest 3D occupancy prediction benchmark in autonomous driving. To highlight, 
+we build it on top of [nuPlan](https://www.nuscenes.org/nuplan#challenge), covering a wide span of over 
+**120 hours** of occupancy labels collected in various cities, from `Boston`, `Pittsburgh`, `Las Vegas` to `Singapore`.
 The stats of the dataset is summarized [here](docs/dataset_stats.md).
-
-
 
 <center>
   
@@ -80,142 +107,24 @@ The stats of the dataset is summarized [here](docs/dataset_stats.md).
 > - Flow: the annotation of motion direction and velocity for each occupancy grid.
 > - `TODO`: Full semantic labels of grids would be released in future version
 
-
-
-
-
-
-### :fire: OpenScene: Empowering [DriveAGI](https://github.com/OpenDriveLab/DriveAGI) in the era of Foundation Model
-
-
-> Which formulation is good for modeling the autonomous driving scenarios?
-
-We posit that incorporating the motion information of **occupancy flow** can help bridge the gap between `decision-making` and `scene representation`.
-Besides, the OpenScene dataset provides a semantic label for each foreground grid, serving as a crucial initial step toward achieving DriveAGI. 
-
-
-
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-
-## Task and Evaluation Metric
-
-> Disclaimer: The following task (or title) is **_prone_** to change as we are shaping the 2024 edition of the Autonomous Driving Challenge.
-
-
-### Large-Scale Occupancy Prediction
-
-
-Given massive images from multiple cameras in OpenScene, the goal is to predict the current occupancy state and semantics of each voxel grid in the scene.
-In this task, we use the **[intersection-over-union (mIoU)](docs/metrics.md#miou)** over all classes to evaluate model performance.
-
-
-
-Here we provide a naive baseline for the **Large-Scale Occupancy Prediction** on OpenScene `mini` set, trained with 8 Tesla A100 GPUs.
-
-<center>
-
-| Backbone | mIoU |    IoU@Car   |  Precision  | Recall  | Memory  |  Time  |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|  ResNet-50   |   7.5 (not fully trained)  |   21.4  |  24.4   |   65.3  |  9260   |   43   |
-|  VoVNet-99   |  14.4  (not fully trained)   |   35.9  |  46.7   |   76.1  |  14537  |   81   |
-> - `mIoU` (%), `IoU@Car` (%), `Precision` (%), and `Recall` (%) are evaluated on 20% OpenScene `mini` set.
-> - `Memory` (MB/GPU) and `Time` (hr) are recorded as the reference of resource consumption during training. 
-
-</center>
-
-
-
-### Foundation Model Challenge
-
-
-
-
-
-
-
-In this task, given arbitrary data and architecture, we aim to have
-a unified backbone (aka, `foundation model`) to effectively address multifaceted downstream tasks.
-The **[OpenScene metric (OSM)](docs/metrics.md#osm)** is adopted to evaluate the effectiveness of such a foundation model in all aspects.
-In order to train the large model, you can use `OpenScene` or whatever means of solution at your discretion.
-
-
-<center>
-
-| Downstream Task | KITTI | nuScenes| Waymo | Scene Diversity| OSM |
-|:---------:|:---------:|:---------:|:---------------:|:---------:|:---:|
-| 3D Detection |  | :heavy_check_mark:  | |   `downtown`  `crowded` | [NDS](https://www.nuscenes.org/object-detection?externalData=all&mapData=all&modalities=Any) |
-| Semantic Segmentation |  | :heavy_check_mark: |  |  `downtown`  `crowded`  | mIoU |   
-| Scene Completion |  | :heavy_check_mark: |   |   `downtown`  `crowded` | mIoU |
-| Map Construction |  | :heavy_check_mark: |   |   `downtown`  `crowded`   | mAP  |
-| Object Tracking | |  |  :heavy_check_mark: |  `suburb` `nighttime` `rainy`   | [MOTA](https://waymo.com/open/challenges/2020/3d-tracking/)  |  
-| Depth Estimation |  :heavy_check_mark: |  |  |  `countryside` `highway`  | [SILog](https://www.cvlibs.net/datasets/kitti/eval_depth.php?benchmark=depth_prediction)  |
-| Visual Odometry |  :heavy_check_mark: |  |   |   `countryside` `highway` |  [Translation](https://www.cvlibs.net/datasets/kitti/eval_odometry.php)  |
-| Flow Estimation |  :heavy_check_mark:  |   |  |  `countryside` `highway`  | [Fl-all](https://www.cvlibs.net/datasets/kitti/eval_scene_flow.php?benchmark=flow)   |
-| 3D Lane Detection |  |  | :heavy_check_mark:  |  `suburb` `nighttime` `rainy` | [F1-Score](https://github.com/OpenDriveLab/OpenLane) |
-
-</center>
-
-> - We consolidate the above metrics to OSM by computing a weighted sum.
-> - The listed datasets and tasks are tentative. Please refer to the AD24 challenge (TBA) for details.
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-
-## Ecosystem and Leaderboard
-
-### Upcoming Challenge in 2024
-
-We plan to release a trailer version of the upcoming challenge. Please stay tuned for more details in `Late August`.
-- Challenge website: [AD24Challenge](https://opendrivelab.com/AD24Challenge.html) 
-
-
-
-### CVPR 2023 3D Occupancy Prediction Challenge (Server Remains `Active`)
-
-
-- Please submit your great work as we would **`regularly`** maintain this leaderboard!
-- Challenge website: [AD23Challenge](https://opendrivelab.com/AD23Challenge.html#3d_occupancy_prediction)
-
-![Leaderboard](https://github.com/OpenDriveLab/OpenScene/assets/29263416/8399ea67-d61e-41a7-a014-4735986abccc)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-
-## TODO 
-- [x] OpenScene `v1.0`
-- [ ] Full-stack annotation update: background label and camera-view mask
-- [ ] Official Announcement for Autonomous Driving Challenge 2024
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-## Getting Started
+### Getting Started
 - [Download Data](/docs/getting_started.md#download-data)
 - [Prepare Dataset](/docs/getting_started.md#prepare-dataset)
-- [Train a Model](/docs/getting_started.md#train-a-model)
 
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-## License and Citation
+## License and Citation <a name="license-and-citation"></a>
 > Our dataset is based on the [nuPlan Dataset](https://www.nuscenes.org/nuplan) and therefore we distribute the data under [Creative Commons Attribution-NonCommercial-ShareAlike](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode) license and [nuPlan Dataset License Agreement for Non-Commercial Use](https://www.nuscenes.org/terms-of-use). You are free to share and adapt the data, but have to give appropriate credit and may not use the work for commercial purposes.
 All code within this repository is under [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
 
 Please consider citing our paper if the project helps your research with the following BibTex:
 
 ```bibtex
+@article{yang2023vidar,
+  title={Visual Point Cloud Forecasting enables Scalable Autonomous Driving},
+  author={Yang, Zetong and Chen, Li and Sun, Yanan and Li, Hongyang},
+  journal={arXiv preprint arXiv:2312.17655},
+  year={2023}
+}
+
 @misc{openscene2023,
       title = {OpenScene: The Largest Up-to-Date 3D Occupancy Prediction Benchmark in Autonomous Driving},
       author = {OpenScene Contributors},
@@ -235,7 +144,7 @@ Please consider citing our paper if the project helps your research with the fol
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Related Resources
+## Related Resources  <a name="resources"></a>
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 - [DriveAGI](https://github.com/OpenDriveLab/DriveAGI)  | [OpenLane-V2](https://github.com/OpenDriveLab/OpenLane-V2) | [DriveLM](https://github.com/OpenDriveLab/DriveLM)
 - [Survey on Bird's-eye-view Perception](https://github.com/OpenDriveLab/BEVPerception-Survey-Recipe) | [BEVFormer](https://github.com/fundamentalvision/BEVFormer) |  [OccNet](https://github.com/OpenDriveLab/OccNet)

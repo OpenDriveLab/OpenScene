@@ -3,7 +3,7 @@
 
 # Autonomous Grand Challenge Toolkits
 
-**The toolkit of `End-to-End Driving` and `Predictive World Model` tracks for CVPR 2024 challenge.**
+**The toolkit of `End-to-End Driving` and `Predictive World Model` tracks for [CVPR 2024 Autonomous Grand Challenge](https://opendrivelab.com/challenge2024).**
 
 <p align="center">
   <img src="assets/challenge.jpeg" width="900px" >
@@ -14,16 +14,19 @@
 
 1. [Track: End-to-End Driving at Scale](#e2etrack)
 2. [Track: Predictive World Model](#worldmodel)
-3. [Dataset](#dataset)
+3. [Dataset: OpenScene](#dataset)
 4. [License and Citation](#license-and-citation)
 5. [Related Resources](#resources)
 
-## End-to-End Driving at Scale <a name="e2etrack"></a>
+## Track: End-to-End Driving at Scale <a name="e2etrack"></a>
 <div id="top" align="center">
 <p align="center">
   <img src="assets/e2e_banner.png" width="900px" >
 </p>
 </div>
+
+> - Official website: :globe_with_meridians: [AGC2024](https://opendrivelab.com/challenge2024/#end_to_end_driving_at_scale)
+> - Evaluation server: :hugs: [Hugging Face](https://huggingface.co/spaces/AGC2024-P/e2e-driving-2024)
 
 ### Brief Description
 Benchmarking sensorimotor driving policies with real data is challenging due to the limited scale of prior datasets and the misalignment between open- and closed-loop metrics. In this track, we use the large-scale OpenScene dataset and aim to bridge the gap between the two evaluation paradigms. Our Non-Reactive Autonomous Vehicle Simulation framework (NAVSim) gathers closed-loop metrics for end-to-end driving by unrolling simplified bird's eye view abstractions of scenes for a short simulation horizon. It operates under the condition that the policy has no influence on the environment, which enables efficient, open-loop metric computation while being better aligned with closed-loop evaluations than traditional displacement errors.
@@ -34,6 +37,9 @@ Benchmarking sensorimotor driving policies with real data is challenging due to 
   <img src="assets/pred_banner.png" width="900px" >
 </p>
 </div>
+
+> - Official website: :globe_with_meridians: [AGC2024](https://opendrivelab.com/challenge2024/#predictive_world_model)
+> - Evaluation server: :hugs: [Hugging Face](https://huggingface.co/spaces/AGC2024-P/predictive-world-model-2024)
 
 - [Problem Formulation](#worldmodel-baseline)
 - [Evaluation: Chamfer Distance](#worldmodel-eval)
@@ -69,7 +75,7 @@ within the range of -51.2m to 51.2m. Participants are required to provide depths
 system will render point clouds by ray directions and provided depth for chamfer distance evaluation.
 
 ### Submission <a name="worldmodel-submission"></a>
-TBA
+The evaluation server at [Hugging Face](https://huggingface.co/spaces/AGC2024-P/predictive-world-model-2024) will be open around `late March`!
 
 ## Dataset: OpenScene <a name="dataset"></a>
 
@@ -80,7 +86,6 @@ TBA
 </div>
 
 > - [Medium Blog](https://medium.com/@opendrivelab/introducing-openscene-the-largest-benchmark-for-occupancy-prediction-in-autonomous-driving-74cfc5bbe7b6) | [Zhihu](https://zhuanlan.zhihu.com/p/647953862) (in Chinese)
-> - [CVPR 2024 Autonomous Driving Challenge - Occupancy Track](https://opendrivelab.com/AD23Challenge.html#3d_occupancy_prediction)
 > - Point of contact: [contact@opendrivelab.com](mailto:contact@opendrivelab.com)
 
 ### Description

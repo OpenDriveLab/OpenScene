@@ -11,33 +11,59 @@ Based on [nuPlan](https://www.nuscenes.org/nuplan), we provide occupancy detecti
 - We supplemented more logs that have sensor data.
 - We further uploaded the LiDAR raw sensor data.
 
+### :blow: Must Read for the CVPR 2024 Challenge
+
+- For Track **End-to-End Driving at Scale**, please download the `meta_data` and the `camera` sensor data.
+- For Track **Predictive World Model**, please download the `meta_data`, the `camera` and `LiDAR` sensor data.
+
+- The `private test` set utilized in this challenge is exclusively provided by Motional and should not be confused with the `test` set.
+- It's important to note that the private test sets for the two tracks are distinct and do not share any overlapped data.
+- The input data (metadata, sensors) for the private test set will be accessible upon the test server open. The ground truth data will be only available on the test server operated by Motional.
+
+
 ### Download Data
-We recommended to download from [**OpenDriveLab**](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene)<img src="https://github.com/OpenDriveLab/OpenLane-V2/assets/29263416/4cfa0f7f-535c-40fa-9fca-81276683931d" alt="OpenDriveLab" width="18"/> and use provided **command line interface (CLI)** for acceleration. 
+<!-- We recommended to download from [**OpenDriveLab**](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene)<img src="https://github.com/OpenDriveLab/OpenLane-V2/assets/29263416/4cfa0f7f-535c-40fa-9fca-81276683931d" alt="OpenDriveLab" width="18"/> and use provided **command line interface (CLI)** for acceleration.  -->
 
-Additionally, we provide download link from Amazon AWS S3.
+- We provide download link from Amazon **AWS S3**. Currently, our download server is located in Asia. We plan to expand our server locations to include the US and Europe soon.
 
-#### Subset mini
+- The sensor data for both the trainval and test subsets amount to approximately 2TB. We are currently in the process of uploading this data to servers across the globe. We anticipate making these datasets available by **early March**. We recommend initially training and validating your model on the mini set.
 
-| File Name  | Amazon AWS S3 | Approx. Size |
+- :bell: For those who already possess the [nuPlan](https://www.nuscenes.org/nuplan) sensor data (over 20TB) locally, you have the option to directly link it to the OpenScene folder to avoid redundant downloads. We carefully make the folder structure aligned with nuPlan and just downsample the nuPlan sensor data to improve the accessibility.
+
+- If you already have the OpenScene v1.0 sensor data, you can use it for OpenScene v1.1 as well, since almost (>98%) all the data are present. There are only a few instances of additional data in v1.1 that are missing. You can temporarily ignore those frames during training.
+
+#### mini set
+
+| File Name  | Amazon AWS S3 | Size |
 | :---: |  :---: | :---: |
-| openscene_metadata_mini.tgz | [Asia](https://opendrivelab-openscene.s3.ap-southeast-1.amazonaws.com/openscene-v1.1/openscene_metadata_mini.tgz) | 509.6MB |
+| openscene_metadata_mini.tgz | [Asia](https://opendrivelab-openscene.s3.ap-southeast-1.amazonaws.com/openscene-v1.1/openscene_metadata_mini.tgz)| 509.6MB |
 | openscene_sensor_mini_camera.tgz | [Asia](https://opendrivelab-openscene.s3.ap-southeast-1.amazonaws.com/openscene-v1.1/openscene_sensor_mini_camera.tgz) | 83.9GB |
 | openscene_sensor_mini_lidar.tgz | [Asia](https://opendrivelab-openscene.s3.ap-southeast-1.amazonaws.com/openscene-v1.1/openscene_sensor_mini_lidar.tgz) | 59.1GB |
 
-#### Subset trainval
+#### trainval set
 
-| File Name  | Amazon AWS S3 | Approx. Size |
+| File Name  | Amazon AWS S3 | Size |
 | :---: |  :---: | :---: |
 | openscene_metadata_trainval.tgz | [Asia](https://opendrivelab-openscene.s3.ap-southeast-1.amazonaws.com/openscene-v1.1/openscene_metadata_trainval.tgz) | 6.6GB |
 
-The rest files are uploading.
+#### test set
 
-#### Subset test
-
-| File Name  | Amazon AWS S3 | Approx. Size |
+| File Name  | Amazon AWS S3 | Size |
 | :---: |  :---: | :---: |
 | openscene_metadata_test.tgz | [Asia](https://opendrivelab-openscene.s3.ap-southeast-1.amazonaws.com/openscene-v1.1/openscene_metadata_test.tgz) | 31.3MB |
-The rest files are uploading.
+
+#### private test set
+
+The input data (metadata, sensors) for the private test set will be accessible upon the test server open.
+
+### Prepare Dataset
+
+Please follow the steps below to get familiar with the OpenScene v1.1 dataset.
+
+1. Download all the data manually and unzip them.
+2. Make sure the filesystem hierarchy is the same as the [dataset stats](dataset_stats.md#filesystem-hierarchy).
+3. Modify and run `python DriveEngine/process_data/collect_data.py` to collect the meta_data in any custom split.
+
 
 ## OpenScene v1.0
 
@@ -56,28 +82,11 @@ We recommended to download from [**OpenDriveLab**](https://openxlab.org.cn/datas
 
 To ensure the integrity of the downloaded data, we recommend verifying the file using its [MD5 checksum](https://drive.google.com/file/d/1B9E43icOc16AhzHU33_RBsgVIfhoNgRI/view?usp=drive_link) after the download is complete.
 
-### Prepare Dataset
-
-Please follow the steps below to get familiar with the OpenScene dataset.
-
-1. Following [step-by-step instruction](install.md) to install the environment for setting up the dataset:
-
-2. Download data manually from OpenDriveLab<img src="https://github.com/OpenDriveLab/OpenLane-V2/assets/29263416/4cfa0f7f-535c-40fa-9fca-81276683931d" alt="OpenDriveLab" width="18"/>, Google Drive<img src="https://user-images.githubusercontent.com/29263416/236970575-125919cc-1a36-4968-95e7-f5a17f896f9f.png" alt="Google Drive" width="18"/>, or Baidu Yun<img src="https://user-images.githubusercontent.com/29263416/236970717-fe619dd6-7e36-446b-88bf-30ff91028d87.png" alt="Baidu Yun" width="18"/>. Then link them into the `data/OpenScene/` folder and unzip them. 
-3. Make sure the filesystem hierarchy is the same as the [dataset stats](dataset_stats.md#filesystem-hierarchy).
-
-4. Process the data:
-```sh
-cd DriveEngine
-python ./process_data/prepare_data.py
-# Please be careful of the path recorded in the .pkl file, edit it manually if needed.
-```
-
-
-## Train a Model
+## Train a Occupancy Prediction Model
 
 ### Baseline
 
-We provide a baseline model based on [OccNet](https://github.com/OpenDriveLab/OccNet).
+We provide a baseline model based on [OccNet](https://github.com/OpenDriveLab/OccNet). The baseline is currently compatible with OpenScene dataset `v1.0`.
 <!---Please refer to [DriveEngine](https://github.com/OpenDriveLab/DriveEngine/) (TBA) for details.--->
 
 
@@ -99,4 +108,4 @@ We provide a baseline model based on [OccNet](https://github.com/OpenDriveLab/Oc
 
 ### Visualization 
 
-See [openscene_scenario_visualization.py](/DriveEngine/process_data//openscene_scenario_visualization.py)
+See [openscene_scenario_visualization.py](/DriveEngine/process_data/openscene_scenario_visualization.py)

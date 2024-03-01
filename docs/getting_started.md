@@ -26,7 +26,7 @@ Based on [nuPlan](https://www.nuscenes.org/nuplan), we provide occupancy detecti
 
 - We provide download link from Amazon **AWS S3**. You can use `wget` to download files. Currently, our download server is located in Asia. We plan to expand our server locations to include the US and Europe soon.
 
-- The sensor data for both the trainval and test subsets amount to approximately 2TB. We are currently in the process of uploading this data to servers across the globe. We anticipate making these datasets available by **early March**. We recommend initially training and validating your model on the mini set.
+- The sensor data for both the trainval and test subsets amount to approximately 2TB. We recommend initially training and validating your model on the mini set.
 
 - :bell: For those who already possess the [nuPlan](https://www.nuscenes.org/nuplan) sensor data (over 20TB) locally, you have the option to directly link it to the OpenScene folder to avoid redundant downloads. We carefully make the folder structure aligned with nuPlan and just downsample the nuPlan sensor data to improve the accessibility.
 

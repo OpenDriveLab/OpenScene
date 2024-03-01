@@ -13,7 +13,7 @@ Based on [nuPlan](https://www.nuscenes.org/nuplan), we provide occupancy detecti
 
 ### :exclamation: Must Read for the CVPR 2024 Challenge
 
-- For Track **End-to-End Driving at Scale**, please download the `meta_data` and the `camera` sensor data.
+- For Track **End-to-End Driving at Scale**, please download the `meta_data` and the `camera` or/and `LiDAR` sensor data, depend on modalities you intend to use.
 - For Track **Predictive World Model**, please download the `meta_data`, the `camera` and `LiDAR` sensor data.
 
 - The `private test` set utilized in this challenge is exclusively provided by Motional and should not be confused with the `test` set.

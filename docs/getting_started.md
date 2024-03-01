@@ -24,7 +24,7 @@ Based on [nuPlan](https://www.nuscenes.org/nuplan), we provide occupancy detecti
 ### Download Data
 <!-- We recommended to download from [**OpenDriveLab**](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene)<img src="https://github.com/OpenDriveLab/OpenLane-V2/assets/29263416/4cfa0f7f-535c-40fa-9fca-81276683931d" alt="OpenDriveLab" width="18"/> and use provided **command line interface (CLI)** for acceleration.  -->
 
-- We provide download link from Amazon **AWS S3**. Currently, our download server is located in Asia. We plan to expand our server locations to include the US and Europe soon.
+- We provide download link from Amazon **AWS S3**. You can use `wget` to download files. Currently, our download server is located in Asia. We plan to expand our server locations to include the US and Europe soon.
 
 - The sensor data for both the trainval and test subsets amount to approximately 2TB. We are currently in the process of uploading this data to servers across the globe. We anticipate making these datasets available by **early March**. We recommend initially training and validating your model on the mini set.
 
@@ -36,21 +36,25 @@ Based on [nuPlan](https://www.nuscenes.org/nuplan), we provide occupancy detecti
 
 | File Name  | Amazon AWS S3 | Size |
 | :---: |  :---: | :---: |
-| openscene_metadata_mini.tgz | [Asia](https://opendrivelab-openscene.s3.ap-southeast-1.amazonaws.com/openscene-v1.1/openscene_metadata_mini.tgz)| 509.6MB |
-| openscene_sensor_mini_camera.tgz | [Asia](https://opendrivelab-openscene.s3.ap-southeast-1.amazonaws.com/openscene-v1.1/openscene_sensor_mini_camera.tgz) | 83.9GB |
-| openscene_sensor_mini_lidar.tgz | [Asia](https://opendrivelab-openscene.s3.ap-southeast-1.amazonaws.com/openscene-v1.1/openscene_sensor_mini_lidar.tgz) | 59.1GB |
+| openscene_metadata_mini.tgz | [Asia](https://opendrivelab-openscene.s3.ap-southeast-1.amazonaws.com/openscene-v1.1/openscene_metadata_mini.tgz)| 509.6 MB |
+| openscene_sensor_mini_camera.tgz | [Asia](https://opendrivelab-openscene.s3.ap-southeast-1.amazonaws.com/openscene-v1.1/openscene_sensor_mini_camera.tgz) | 83.9 GB |
+| openscene_sensor_mini_lidar.tgz | [Asia](https://opendrivelab-openscene.s3.ap-southeast-1.amazonaws.com/openscene-v1.1/openscene_sensor_mini_lidar.tgz) | 59.1 GB |
 
 #### trainval set
 
 | File Name  | Amazon AWS S3 | Size |
 | :---: |  :---: | :---: |
-| openscene_metadata_trainval.tgz | [Asia](https://opendrivelab-openscene.s3.ap-southeast-1.amazonaws.com/openscene-v1.1/openscene_metadata_trainval.tgz) | 6.6GB |
+| openscene_metadata_trainval.tgz | [Asia](https://opendrivelab-openscene.s3.ap-southeast-1.amazonaws.com/openscene-v1.1/openscene_metadata_trainval.tgz) | 6.6 GB |
+| openscene_sensor_trainval_camera_{0-24}.tgz | [Asia](download_links/openscene_sensor_trainval_camera.txt) | 1.1 TB |
+| openscene_sensor_trainval_lidar_{0-24}.tgz | [Asia](download_links/openscene_sensor_trainval_lidar.txt) | Uploading... |
 
 #### test set
 
 | File Name  | Amazon AWS S3 | Size |
 | :---: |  :---: | :---: |
-| openscene_metadata_test.tgz | [Asia](https://opendrivelab-openscene.s3.ap-southeast-1.amazonaws.com/openscene-v1.1/openscene_metadata_test.tgz) | 31.3MB |
+| openscene_metadata_test.tgz | [Asia](https://opendrivelab-openscene.s3.ap-southeast-1.amazonaws.com/openscene-v1.1/openscene_metadata_test.tgz) | 31.3 MB |
+| openscene_sensor_test_camera_{0-2}.tgz | [Asia](download_links/openscene_sensor_test_camera.txt) | 119.1 GB |
+| openscene_sensor_test_lidar_{0-2}.tgz | [Asia](download_links/openscene_sensor_test_lidar.txt) | 86.3 GB |
 
 #### private test set
 

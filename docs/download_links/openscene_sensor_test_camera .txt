@@ -1,0 +1,3 @@
+https://opendrivelab-openscene.s3.ap-southeast-1.amazonaws.com/openscene-v1.1/openscene_sensor_test_camera_0.tgz
+https://opendrivelab-openscene.s3.ap-southeast-1.amazonaws.com/openscene-v1.1/openscene_sensor_test_camera_1.tgz
+https://opendrivelab-openscene.s3.ap-southeast-1.amazonaws.com/openscene-v1.1/openscene_sensor_test_camera_2.tgz

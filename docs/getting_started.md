@@ -24,14 +24,36 @@ Based on [nuPlan](https://www.nuscenes.org/nuplan), we provide occupancy detecti
 ### Download Data
 <!-- We recommended to download from [**OpenDriveLab**](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene)<img src="https://github.com/OpenDriveLab/OpenLane-V2/assets/29263416/4cfa0f7f-535c-40fa-9fca-81276683931d" alt="OpenDriveLab" width="18"/> and use provided **command line interface (CLI)** for acceleration.  -->
 
-- We provide download link from Amazon **AWS S3**. You can use `wget` to download files. Currently, our download server is located in Asia. We plan to expand our server locations to include the US and Europe soon.
+- ~~We provide download link from Amazon **AWS S3**. You can use `wget` to download files. Currently, our download server is located in Asia. We plan to expand our server locations to include the US and Europe soon.~~
+- :grey_exclamation: We meet some technical issues and we have to disable the AWS S3 download link. We are really sorry for the unconvenience caused.
+- Please first download the sensor data from [OpenScene v1.0](#openscene-v10). Or directly download all the sensor data from [nuPlan](https://www.nuscenes.org/nuplan).
 
 - The sensor data for both the trainval and test subsets amount to approximately 2TB. We recommend initially training and validating your model on the mini set.
 
 - :bell: For those who already possess the [nuPlan](https://www.nuscenes.org/nuplan) sensor data (over 20TB) locally, you have the option to directly link it to the OpenScene folder to avoid redundant downloads. We carefully make the folder structure aligned with nuPlan and just downsample the nuPlan sensor data to improve the accessibility.
 
 - If you already have the OpenScene v1.0 sensor data, you can use it for OpenScene v1.1 as well, since almost (>98%) all the data are present. If you want to use the occupancy label, please also download it from OpenScene v1.0. There are only a few instances of additional data in v1.1 that are missing. You can temporarily ignore those frames during training.
- 
+
+
+#### mini set
+
+| File Name  | Google Drive | Size |
+| :--------: | :----------: | :--: |
+| openscene_metadata_mini.tgz | [link](https://drive.google.com/file/d/1vGaTaXUQWEo9oZgJe_pUmKXNeCVAT8ME/view?usp=drive_link)| 509.6 MB |
+
+#### trainval set
+
+| File Name  | Google Drive | Size |
+| :--------: | :----------: | :--: |
+| openscene_metadata_trainval.tgz | [link]() | 6.6 GB |
+
+#### test set
+
+| File Name  | Google Drive | Size |
+| :--------: | :----------: | :--: |
+| openscene_metadata_test.tgz | [link]() | 31.3 MB |
+
+<!-- 
 #### mini set
 
 | File Name  | Amazon AWS S3 | Size |
@@ -55,7 +77,7 @@ Based on [nuPlan](https://www.nuscenes.org/nuplan), we provide occupancy detecti
 | openscene_metadata_test.tgz | [Asia](https://opendrivelab-openscene.s3.ap-southeast-1.amazonaws.com/openscene-v1.1/openscene_metadata_test.tgz) | 31.3 MB |
 | openscene_sensor_test_camera_{0-2}.tgz | [Asia](download_links/openscene_sensor_test_camera.txt) | 119.1 GB |
 | openscene_sensor_test_lidar_{0-2}.tgz | [Asia](download_links/openscene_sensor_test_lidar.txt) | 86.3 GB |
-
+-->
 #### private test set
 
 The input data (metadata, sensors) for the private test set will be accessible upon the test server open.

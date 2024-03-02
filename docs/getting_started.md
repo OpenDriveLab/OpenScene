@@ -26,13 +26,13 @@ Based on [nuPlan](https://www.nuscenes.org/nuplan), we provide occupancy detecti
 
 - ~~We provide download link from Amazon **AWS S3**. You can use `wget` to download files. Currently, our download server is located in Asia. We plan to expand our server locations to include the US and Europe soon.~~
 - :grey_exclamation: We meet some technical issues and we have to disable the AWS S3 download link. We are really sorry for the unconvenience caused.
-- Please first download the sensor data from [OpenScene v1.0](#openscene-v10). Or directly download all the sensor data from [nuPlan](https://www.nuscenes.org/nuplan).
+- Please first download the `image` data from [OpenScene v1.0](#openscene-v10). Or directly download all the sensor data from [nuPlan](https://www.nuscenes.org/nuplan).
 
 - The sensor data for both the trainval and test subsets amount to approximately 2TB. We recommend initially training and validating your model on the mini set.
 
 - :bell: For those who already possess the [nuPlan](https://www.nuscenes.org/nuplan) sensor data (over 20TB) locally, you have the option to directly link it to the OpenScene folder to avoid redundant downloads. We carefully make the folder structure aligned with nuPlan and just downsample the nuPlan sensor data to improve the accessibility.
 
-- If you already have the OpenScene v1.0 sensor data, you can use it for OpenScene v1.1 as well, since almost (>98%) all the data are present. If you want to use the occupancy label, please also download it from OpenScene v1.0. There are only a few instances of additional data in v1.1 that are missing. You can temporarily ignore those frames during training.
+- If you already have the OpenScene v1.0 `image` data, you can use it for OpenScene v1.1 as well, since almost (>98%) all the data are present. If you want to use the occupancy label, please also download it from OpenScene v1.0. There are only a few instances of additional data in v1.1 that are missing. You can temporarily ignore those frames during training.
 
 
 #### mini set

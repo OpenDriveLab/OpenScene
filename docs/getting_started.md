@@ -45,13 +45,13 @@ Based on [nuPlan](https://www.nuscenes.org/nuplan), we provide occupancy detecti
 
 | File Name  | Google Drive | Size |
 | :--------: | :----------: | :--: |
-| openscene_metadata_trainval.tgz | [link]() | 6.6 GB |
+| openscene_metadata_trainval.tgz | [link](https://drive.google.com/file/d/1ce3LLQDpST-QzpV1ZVZcaMnjVkZnHXUq/view?usp=drive_link) | 6.6 GB |
 
 #### test set
 
 | File Name  | Google Drive | Size |
 | :--------: | :----------: | :--: |
-| openscene_metadata_test.tgz | [link]() | 31.3 MB |
+| openscene_metadata_test.tgz | [link](https://drive.google.com/file/d/1hTQ56OqaNgljE3zD5qtte91uNE9qgSMk/view?usp=drive_link) | 31.3 MB |
 
 <!-- 
 #### mini set

@@ -46,7 +46,7 @@ Based on [nuPlan](https://www.nuscenes.org/nuplan), we provide occupancy detecti
 | :---: |  :---: | :---: |
 | openscene_metadata_trainval.tgz | [Asia](https://opendrivelab-openscene.s3.ap-southeast-1.amazonaws.com/openscene-v1.1/openscene_metadata_trainval.tgz) | 6.6 GB |
 | openscene_sensor_trainval_camera_{0-24}.tgz | [Asia](download_links/openscene_sensor_trainval_camera.txt) | 1.1 TB |
-| openscene_sensor_trainval_lidar_{0-24}.tgz | [Asia](download_links/openscene_sensor_trainval_lidar.txt) | Uploading... |
+| openscene_sensor_trainval_lidar_{0-24}.tgz | [Asia](download_links/openscene_sensor_trainval_lidar.txt) | 821.6 GB |
 
 #### test set
 

@@ -39,7 +39,7 @@ Based on [nuPlan](https://www.nuscenes.org/nuplan), we provide occupancy detecti
 
 | File Name  | Google Drive | Size |
 | :--------: | :----------: | :--: |
-| openscene_metadata_mini.tgz | [link](https://drive.google.com/file/d/1vGaTaXUQWEo9oZgJe_pUmKXNeCVAT8ME/view?usp=drive_link)| 509.6 MB |
+| openscene_metadata_mini.tgz | [link](https://drive.google.com/file/d/1H3bDDYpjrgr1a4rnpbYRhG8wWMOiBLfN/view?usp=drive_link)| 509.6 MB |
 
 #### trainval set
 

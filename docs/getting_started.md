@@ -36,21 +36,23 @@ Based on [nuPlan](https://www.nuscenes.org/nuplan), we provide occupancy detecti
 
 #### mini set
 
-| File Name  | Google Drive | Size |
+| File Name  | Download Link | Size |
 | :--------: | :----------: | :--: |
-| openscene_metadata_mini.tgz | [link](https://drive.google.com/file/d/1H3bDDYpjrgr1a4rnpbYRhG8wWMOiBLfN/view?usp=drive_link)| 509.6 MB |
+| openscene_metadata_mini.tgz | [Google Drive](https://drive.google.com/file/d/1H3bDDYpjrgr1a4rnpbYRhG8wWMOiBLfN/view?usp=drive_link) / [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/main/openscene-v1.1/openscene_metadata_mini.tgz?download=true)  | 509.6 MB |
+| openscene_sensor_mini_camera | [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1/openscene_sensor_mini_camera) | 84 GB |
+| openscene_sensor_mini_lidar | [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1/openscene_sensor_mini_lidar) | 60 GB |
 
 #### trainval set
 
-| File Name  | Google Drive | Size |
+| File Name  | Download Link | Size |
 | :--------: | :----------: | :--: |
-| openscene_metadata_trainval.tgz | [link](https://drive.google.com/file/d/1ce3LLQDpST-QzpV1ZVZcaMnjVkZnHXUq/view?usp=drive_link) | 6.6 GB |
+| openscene_metadata_trainval.tgz | [Google Drive](https://drive.google.com/file/d/1ce3LLQDpST-QzpV1ZVZcaMnjVkZnHXUq/view?usp=drive_link) / [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/main/openscene-v1.1/openscene_metadata_trainval.tgz?download=true) | 6.6 GB |
 
 #### test set
 
-| File Name  | Google Drive | Size |
+| File Name  | Download Link | Size |
 | :--------: | :----------: | :--: |
-| openscene_metadata_test.tgz | [link](https://drive.google.com/file/d/1hTQ56OqaNgljE3zD5qtte91uNE9qgSMk/view?usp=drive_link) | 31.3 MB |
+| openscene_metadata_test.tgz | [Google Drive](https://drive.google.com/file/d/1hTQ56OqaNgljE3zD5qtte91uNE9qgSMk/view?usp=drive_link) / [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/main/openscene-v1.1/openscene_metadata_test.tgz?download=true) | 31.3 MB |
 
 #### private test set
 

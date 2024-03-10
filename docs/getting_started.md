@@ -53,6 +53,7 @@ Based on [nuPlan](https://www.nuscenes.org/nuplan), we provide occupancy detecti
 | File Name  | Download Link | Size |
 | :--------: | :----------: | :--: |
 | openscene_metadata_test.tgz | [Google Drive](https://drive.google.com/file/d/1hTQ56OqaNgljE3zD5qtte91uNE9qgSMk/view?usp=drive_link) / [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/main/openscene-v1.1/openscene_metadata_test.tgz?download=true) | 31.3 MB |
+| openscene_sensor_test_camera | [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1/openscene_sensor_test_camera) | 120 GB |
 
 #### private test set
 

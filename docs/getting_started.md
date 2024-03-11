@@ -49,8 +49,8 @@ Based on [nuPlan](https://www.nuscenes.org/nuplan), we provide occupancy detecti
 | File Name  | Download Link | Size |
 | :--------: | :----------: | :--: |
 | openscene_metadata_trainval.tgz | [Google Drive](https://drive.google.com/file/d/1ce3LLQDpST-QzpV1ZVZcaMnjVkZnHXUq/view?usp=drive_link) / [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/main/openscene-v1.1/openscene_metadata_trainval.tgz?download=true) | 6.6 GB |
-| openscene_sensor_train_camera | [OpenDriveLab](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1) | 1.1 TB |
-| openscene_sensor_train_lidar | [OpenDriveLab](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1) | 822 GB |
+| openscene_sensor_trainval_camera | [OpenDriveLab](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1) | 1.1 TB |
+| openscene_sensor_trainval_lidar | [OpenDriveLab](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1) | 822 GB |
 
 #### test set
 

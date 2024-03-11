@@ -22,16 +22,18 @@ Based on [nuPlan](https://www.nuscenes.org/nuplan), we provide occupancy detecti
 
 
 ### Download Data
-- We recommended to download all data from [**OpenDriveLab**](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1)<img src="https://github.com/OpenDriveLab/OpenLane-V2/assets/29263416/4cfa0f7f-535c-40fa-9fca-81276683931d" alt="OpenDriveLab" width="18"/> and use provided **command line interface (CLI)** for acceleration.
 - ~~We provide download link from Amazon **AWS S3**. You can use `wget` to download files. Currently, our download server is located in Asia. We plan to expand our server locations to include the US and Europe soon.~~
 - :grey_exclamation: We meet some technical issues and we have to disable the AWS S3 download link. We are really sorry for the unconvenience caused.
-- If you can't access [**OpenDriveLab**](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1)<img src="https://github.com/OpenDriveLab/OpenLane-V2/assets/29263416/4cfa0f7f-535c-40fa-9fca-81276683931d" alt="OpenDriveLab" width="18"/>, please first download the `image` data from [OpenScene v1.0](#openscene-v10). Or directly download all the sensor data from [nuPlan](https://www.nuscenes.org/nuplan).
 
-- The sensor data for both the trainval and test subsets amount to approximately 2TB. We recommend initially training and validating your model on the mini set.
+- We recommended to download all data from [**OpenDriveLab**](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1)<img src="https://github.com/OpenDriveLab/OpenLane-V2/assets/29263416/4cfa0f7f-535c-40fa-9fca-81276683931d" alt="OpenDriveLab" width="18"/> and use provided **command line interface (CLI)** for acceleration.
+
+- The sensor data for both the trainval and test subsets amount to approximately 2TB. We recommend initially training and validating your model on the **`mini` set**.
 
 - :bell: For those who already possess the [nuPlan](https://www.nuscenes.org/nuplan) sensor data (over 20TB) locally, you have the option to directly link it to the OpenScene folder to avoid redundant downloads. We carefully make the folder structure aligned with nuPlan and just downsample the nuPlan sensor data to improve the accessibility.
 
 - If you already have the OpenScene v1.0 `image` data, you can use it for OpenScene v1.1 as well, since almost (>98%) all the data are present. If you want to use the occupancy label, please also download it from OpenScene v1.0. There are only a few instances of additional data in v1.1 that are missing. You can temporarily ignore those frames during training.
+
+- If you can't access [**OpenDriveLab**](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1)<img src="https://github.com/OpenDriveLab/OpenLane-V2/assets/29263416/4cfa0f7f-535c-40fa-9fca-81276683931d" alt="OpenDriveLab" width="18"/> (out of China), please first download the `image` data from [OpenScene v1.0](#openscene-v10). Or directly download all the sensor data from [nuPlan](https://www.nuscenes.org/nuplan).
 
 
 #### mini set
@@ -39,7 +41,7 @@ Based on [nuPlan](https://www.nuscenes.org/nuplan), we provide occupancy detecti
 | File Name  | Download Link | Size |
 | :--------: | :----------: | :--: |
 | openscene_metadata_mini.tgz | [Google Drive](https://drive.google.com/file/d/1H3bDDYpjrgr1a4rnpbYRhG8wWMOiBLfN/view?usp=drive_link) / [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/main/openscene-v1.1/openscene_metadata_mini.tgz?download=true)  | 509.6 MB |
-| openscene_sensor_mini_camera | [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1/openscene_sensor_mini_camera) | 84 GB |
+| openscene_sensor_mini_camera | [OpenDriveLab](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1) / [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1/openscene_sensor_mini_camera) | 84 GB |
 | openscene_sensor_mini_lidar | [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1/openscene_sensor_mini_lidar) | 60 GB |
 
 #### trainval set
@@ -47,14 +49,16 @@ Based on [nuPlan](https://www.nuscenes.org/nuplan), we provide occupancy detecti
 | File Name  | Download Link | Size |
 | :--------: | :----------: | :--: |
 | openscene_metadata_trainval.tgz | [Google Drive](https://drive.google.com/file/d/1ce3LLQDpST-QzpV1ZVZcaMnjVkZnHXUq/view?usp=drive_link) / [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/main/openscene-v1.1/openscene_metadata_trainval.tgz?download=true) | 6.6 GB |
+| openscene_sensor_train_camera | [OpenDriveLab](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1) | 1.1 TB |
+| openscene_sensor_train_lidar | [OpenDriveLab](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1) | 822 GB |
 
 #### test set
 
 | File Name  | Download Link | Size |
 | :--------: | :----------: | :--: |
 | openscene_metadata_test.tgz | [Google Drive](https://drive.google.com/file/d/1hTQ56OqaNgljE3zD5qtte91uNE9qgSMk/view?usp=drive_link) / [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/main/openscene-v1.1/openscene_metadata_test.tgz?download=true) | 31.3 MB |
-| openscene_sensor_test_camera | [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1/openscene_sensor_test_camera) | 120 GB |
-| openscene_sensor_test_lidar | [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1/openscene_sensor_test_lidar) | 87 GB |
+| openscene_sensor_test_camera | [OpenDriveLab](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1) / [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1/openscene_sensor_test_camera) | 120 GB |
+| openscene_sensor_test_lidar | [OpenDriveLab](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1) / [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1/openscene_sensor_test_lidar) | 87 GB |
 
 #### private test set
 

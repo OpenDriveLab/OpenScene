@@ -1,7 +1,7 @@
 
 <div id="top" align="center">
 
-# Autonomous Grand Challenge Toolkits
+# OpenScene: Autonomous Grand Challenge Toolkits
 
 **The large-scale dataset of `End-to-End Driving` and `Predictive World Model` tracks for [CVPR 2024 Autonomous Grand Challenge](https://opendrivelab.com/challenge2024).**
 
@@ -9,6 +9,12 @@
   <img src="assets/challenge.jpeg" width="900px" >
 </p>
 </div>
+
+## News
+
+- **`2024/03/18`** We update the [test metadata](/docs/getting_started.md#test-set) with box annotation, please re-download it.
+- **`2024/03/01`** OpenScene `v1.1` released, [change log](/docs/getting_started.md#openscene-v11).
+- **`2024/03/01`** We are hosting **CVPR 2024 Autonomous Grand Challenge**.
 
 ## Table of Contents
 

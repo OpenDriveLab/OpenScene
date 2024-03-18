@@ -97,19 +97,19 @@ The final hierarchy should look as follows (depending on the splits downloaded a
 
 
 ## Meta Data
-Each pkl file is stored in the following format：
+Each `.pkl` file is stored in the following format：
 
 ```
 {
-    'token':                                <str> -- Unique record identifier.
+    'token':                                <str> -- Unique record identifier. Pointing to the nuPlan lidar_pc.
     'frame_idx':                            <int> -- Indicates the idx of the current frame.
     'timestamp':                            <int> -- Unix time stamp.
     'log_name':                             <str> -- Short string identifier.
-    'log_token':                            <str> -- Foreign key. Points to log from where the data was extracted.
+    'log_token':                            <str> -- Foreign key pointing to the nuPlan log.
     'scene_name':                           <str> -- Short string identifier.
-    'scene_token':                          <str> -- Foreign key pointing to the scene.
-    'map_location':                         <str> -- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-    'roadblock_ids':                        <list> -- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    'scene_token':                          <str> -- Foreign key pointing to the nuPlan scene.
+    'map_location':                         <str> -- Area where log was captured.
+    'roadblock_ids':                        <list> -- A sequence of roadblock ids separated by commas. The ids can be looked up in the nuPlan Map API.
     'vehicle_name':                         <str> -- String identifier for the current car.
     'can_bus':                              <list> -- Used for vehicle communications, including low-level information about position, speed, acceleration, steering, lights, batteries, etc.
     'lidar_path':                           <str> -- The relative address to store the lidar data.
@@ -152,5 +152,3 @@ Each pkl file is stored in the following format：
     'flow_gt_final_path':                   <str> -- The relative address to store the flow gt data.     
 }
 ```
-
-## Sensor Blobs

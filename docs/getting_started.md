@@ -32,32 +32,29 @@ Based on [nuPlan](https://www.nuscenes.org/nuplan), we provide bounding box, occ
 
 - If you can't access [**OpenDriveLab**](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1)<img src="https://github.com/OpenDriveLab/OpenLane-V2/assets/29263416/4cfa0f7f-535c-40fa-9fca-81276683931d" alt="OpenDriveLab" width="18"/>, please try the HuggingFace download links below. Alternatively, you may first download the `image` data from [OpenScene v1.0](#openscene-v10). Or directly download all the sensor data from [nuPlan](https://www.nuscenes.org/nuplan).
 
-- ~~We provide download links from Amazon **AWS S3**. You can use `wget` to download files. Currently, our download server is located in Asia. We plan to expand our server locations to include the US and Europe soon.~~ :grey_exclamation: We met some technical issues and have to disable the AWS S3 download link. We are sorry for any inconvenience caused.
-
-
 #### mini set
 
 | File Name  | Download Link | Size |
 | :--------: | :----------: | :--: |
-| openscene_metadata_mini.tgz | [Google Drive](https://drive.google.com/drive/folders/1MnRwhnEBsgZxbaleHxc3Gw7Ovc4I9az1?usp=sharing) / [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/main/openscene-v1.1/openscene_metadata_mini.tgz?download=true)  | 509.6 MB |
+| openscene_metadata_mini.tgz  | [Google Drive](https://drive.google.com/drive/folders/1MnRwhnEBsgZxbaleHxc3Gw7Ovc4I9az1?usp=sharing) / [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/main/openscene-v1.1/openscene_metadata_mini.tgz?download=true)  | 509.6 MB |
 | openscene_sensor_mini_camera | [OpenDriveLab](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1) / [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1/openscene_sensor_mini_camera) | 84 GB |
-| openscene_sensor_mini_lidar | [OpenDriveLab](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1) / [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1/openscene_sensor_mini_lidar) | 60 GB |
+| openscene_sensor_mini_lidar  | [OpenDriveLab](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1) / [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1/openscene_sensor_mini_lidar) | 60 GB |
 
 #### trainval set
 
 | File Name  | Download Link | Size |
 | :--------: | :----------: | :--: |
-| openscene_metadata_trainval.tgz | [Google Drive](https://drive.google.com/drive/folders/1MnRwhnEBsgZxbaleHxc3Gw7Ovc4I9az1?usp=sharing) / [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/main/openscene-v1.1/openscene_metadata_trainval.tgz?download=true) | 6.6 GB |
-| openscene_sensor_trainval_camera | [OpenDriveLab](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1) | 1.1 TB |
-| openscene_sensor_trainval_lidar | [OpenDriveLab](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1) | 822 GB |
+| openscene_metadata_trainval.tgz  | [Google Drive](https://drive.google.com/drive/folders/1MnRwhnEBsgZxbaleHxc3Gw7Ovc4I9az1?usp=sharing) / [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/main/openscene-v1.1/openscene_metadata_trainval.tgz?download=true) | 6.6 GB |
+| openscene_sensor_trainval_camera | [OpenDriveLab](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1) / [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1/openscene_sensor_trainval_camera) | 1.1 TB |
+| openscene_sensor_trainval_lidar  | [OpenDriveLab](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1) [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1/openscene_sensor_trainval_lidar) | 822 GB |
 
 #### test set
 
 | File Name  | Download Link | Size |
 | :--------: | :----------: | :--: |
-| openscene_metadata_test.tgz | [Google Drive](https://drive.google.com/drive/folders/1MnRwhnEBsgZxbaleHxc3Gw7Ovc4I9az1?usp=sharing) / [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/main/openscene-v1.1/openscene_metadata_test.tgz?download=true) | 454 MB |
+| openscene_metadata_test.tgz  | [Google Drive](https://drive.google.com/drive/folders/1MnRwhnEBsgZxbaleHxc3Gw7Ovc4I9az1?usp=sharing) / [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/main/openscene-v1.1/openscene_metadata_test.tgz?download=true) | 454 MB |
 | openscene_sensor_test_camera | [OpenDriveLab](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1) / [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1/openscene_sensor_test_camera) | 120 GB |
-| openscene_sensor_test_lidar | [OpenDriveLab](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1) / [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1/openscene_sensor_test_lidar) | 87 GB |
+| openscene_sensor_test_lidar  | [OpenDriveLab](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1) / [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1/openscene_sensor_test_lidar) | 87 GB |
 
 #### private test set
 

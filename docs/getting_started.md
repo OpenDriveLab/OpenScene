@@ -1,39 +1,38 @@
 # Getting Started
 
-The OpenScene dataset is a large-scale dataset for visual pretraining in the field of autonomous driving.
-Based on [nuPlan](https://www.nuscenes.org/nuplan), we provide occupancy detection and flow annotations in 3D space.
-**Download now to discover our dataset!**
+The OpenScene dataset is a large-scale dataset for end-to-end planning, visual pretraining, and occupancy prediction in the field of autonomous driving.
+
+Based on [nuPlan](https://www.nuscenes.org/nuplan), we provide bounding box, occupancy, and flow annotations in 3D space.
 
 ## OpenScene v1.1
 
 ### :fire: Change Log
-- We reorganized the meta data files and divided it by nuPlan log file to improve accessibility.
-- We supplemented more logs that have sensor data.
-- We further uploaded the LiDAR raw sensor data.
+- We reorganized the meta data files and organized them by their nuPlan log files to improve usability.
+- We added more logs that have sensor data and uploaded the LiDAR raw sensor data.
 
 ### :exclamation: Must Read for the CVPR 2024 Challenge
 
-- For Track **End-to-End Driving at Scale**, please download the `meta_data` and the `camera` or/and `LiDAR` sensor data, depend on modalities you intend to use.
+- For Track **End-to-End Driving at Scale**, please download the `meta_data` and the `camera` or/and `LiDAR` sensor data, depend on modalities you intend to use. Note that there is no separate competition track for camera-only planners.
 - For Track **Predictive World Model**, please download the `meta_data`, the `camera` and `LiDAR` sensor data.
 
-- The `private test` set utilized in this challenge is exclusively provided by Motional and should not be confused with the `test` set.
-- It's important to note that the private test sets for the two tracks are distinct and do not share any overlapped data.
-- The input data (metadata, sensors) for the private test set will be accessible upon the test server open. The ground truth data will be only available on the test server operated by Motional.
+- The `private test` set utilized in the challenge leaderboards is exclusively provided by Motional and should not be confused with the `test` set.
+- It is important to note that the private test sets for the two tracks are distinct and do not share any data.
+- The input data (metadata, sensors) for the private test set will be accessible upon the opening of test server. The ground truth data will be only available on the test server operated by Motional.
 
 
 ### Download Data
-- ~~We provide download link from Amazon **AWS S3**. You can use `wget` to download files. Currently, our download server is located in Asia. We plan to expand our server locations to include the US and Europe soon.~~
-- :grey_exclamation: We meet some technical issues and we have to disable the AWS S3 download link. We are really sorry for the unconvenience caused.
 
 - We recommended to download all data from [**OpenDriveLab**](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1)<img src="https://github.com/OpenDriveLab/OpenLane-V2/assets/29263416/4cfa0f7f-535c-40fa-9fca-81276683931d" alt="OpenDriveLab" width="18"/> and use provided **command line interface (CLI)** for acceleration.
 
-- The sensor data for both the trainval and test subsets amount to approximately 2TB. We recommend initially training and validating your model on the **`mini` set**.
+- The sensor data for both the trainval and test subsets amount to approximately 2TB. We recommend initially training and validating your models on the **`mini` set**.
 
-- :bell: For those who already possess the [nuPlan](https://www.nuscenes.org/nuplan) sensor data (over 20TB) locally, you have the option to directly link it to the OpenScene folder to avoid redundant downloads. We carefully make the folder structure aligned with nuPlan and just downsample the nuPlan sensor data to improve the accessibility.
+- :bell: For those who already possess the [nuPlan](https://www.nuscenes.org/nuplan) sensor data (over 20TB) locally, you have the option to directly link it to the OpenScene folder to avoid redundant downloads. We carefully aligned the folder structure with nuPlan and just downsampled the nuPlan sensor data to improve the accessibility.
 
-- If you already have the OpenScene v1.0 `image` data, you can use it for OpenScene v1.1 as well, since almost (>98%) all the data are present. If you want to use the occupancy label, please also download it from OpenScene v1.0. There are only a few instances of additional data in v1.1 that are missing. You can temporarily ignore those frames during training.
+- :bell: If you already have the OpenScene v1.0 `image` data, you can use it for OpenScene v1.1 as well, since almost (>98%) of all the data is present. If you want to use the occupancy label, please also download it from OpenScene v1.0. There are only a few instances of additional data in v1.1 that are missing. You can temporarily ignore those frames during training.
 
-- If you can't access [**OpenDriveLab**](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1)<img src="https://github.com/OpenDriveLab/OpenLane-V2/assets/29263416/4cfa0f7f-535c-40fa-9fca-81276683931d" alt="OpenDriveLab" width="18"/> (out of China), please first download the `image` data from [OpenScene v1.0](#openscene-v10). Or directly download all the sensor data from [nuPlan](https://www.nuscenes.org/nuplan).
+- If you can't access [**OpenDriveLab**](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1)<img src="https://github.com/OpenDriveLab/OpenLane-V2/assets/29263416/4cfa0f7f-535c-40fa-9fca-81276683931d" alt="OpenDriveLab" width="18"/>, please try the HuggingFace download links below. Alternatively, you may first download the `image` data from [OpenScene v1.0](#openscene-v10). Or directly download all the sensor data from [nuPlan](https://www.nuscenes.org/nuplan).
+
+- ~~We provide download links from Amazon **AWS S3**. You can use `wget` to download files. Currently, our download server is located in Asia. We plan to expand our server locations to include the US and Europe soon.~~ :grey_exclamation: We met some technical issues and have to disable the AWS S3 download link. We are sorry for any inconvenience caused.
 
 
 #### mini set
@@ -62,7 +61,7 @@ Based on [nuPlan](https://www.nuscenes.org/nuplan), we provide occupancy detecti
 
 #### private test set
 
-The input data (metadata, sensors) for the private test set will be accessible upon the test server open.
+The input data (metadata, sensors) for the private test set will be accessible upon the opening of the test server.
 
 ### Prepare Dataset
 

@@ -3,7 +3,7 @@
 
 # OpenScene: Autonomous Grand Challenge Toolkits
 
-**The large-scale dataset of `End-to-End Driving` and `Predictive World Model` tracks for [CVPR 2024 Autonomous Grand Challenge](https://opendrivelab.com/challenge2024).**
+**The large-scale dataset used for the `End-to-End Driving` and `Predictive World Model` tracks for the [CVPR 2024 Autonomous Grand Challenge](https://opendrivelab.com/challenge2024).**
 
 <p align="center">
   <img src="assets/challenge.jpeg" width="900px" >
@@ -12,19 +12,19 @@
 
 ## News
 
-- **`2024/03/18`** We update the [test metadata](/docs/getting_started.md#test-set) with box annotation, please re-download it.
+- **`2024/03/18`** We updated the [test metadata](/docs/getting_started.md#test-set) with box annotations, please re-download it.
 - **`2024/03/01`** OpenScene `v1.1` released, [change log](/docs/getting_started.md#openscene-v11).
 - **`2024/03/01`** We are hosting **CVPR 2024 Autonomous Grand Challenge**.
 
 ## Table of Contents
 
-1. [Track: End-to-End Driving at Scale](#e2etrack)
+1. [Track: End-to-End Driving at Scale](#navsim)
 2. [Track: Predictive World Model](#worldmodel)
 3. [Dataset: OpenScene](#dataset)
 4. [License and Citation](#license-and-citation)
 5. [Related Resources](#resources)
 
-## Track: End-to-End Driving at Scale <a name="e2etrack"></a>
+## Track: End-to-End Driving at Scale <a name="navsim"></a>
 <div id="top" align="center">
 <p align="center">
   <img src="assets/e2e_banner.png" width="900px" >
@@ -33,10 +33,22 @@
 
 > - Official website: :globe_with_meridians: [AGC2024](https://opendrivelab.com/challenge2024/#end_to_end_driving_at_scale)
 > - Evaluation server: :hugs: [Hugging Face](https://huggingface.co/spaces/AGC2024-P/e2e-driving-2024)
-> - Develop Kit: :ringed_planet: [NAVSIM](https://github.com/autonomousvision/navsim)
+> - Development Kit: :ringed_planet: [NAVSIM](https://github.com/autonomousvision/navsim)
 
-### Brief Description
-Benchmarking sensorimotor driving policies with real data is challenging due to the limited scale of prior datasets and the misalignment between open- and closed-loop metrics. In this track, we use the large-scale OpenScene dataset and aim to bridge the gap between the two evaluation paradigms. Our Non-Reactive Autonomous Vehicle Simulation framework (NAVSim) gathers closed-loop metrics for end-to-end driving by unrolling simplified bird's eye view abstractions of scenes for a short simulation horizon. It operates under the condition that the policy has no influence on the environment, which enables efficient, open-loop metric computation while being better aligned with closed-loop evaluations than traditional displacement errors.
+- [Problem Formulation](#navsim-baseline)
+- [Evaluation: Chamfer Distance](#navsim-eval)
+- [Submission](#navsim-submission)
+
+NAVSIM gathers simulation-based metrics (such as progress and time to collision) for end-to-end driving by unrolling simplified bird's eye view abstractions of scenes for a short simulation horizon. It operates under the condition that the policy has no influence on the environment, which enables efficient, open-loop metric computation while being better aligned with closed-loop evaluations than traditional displacement errors.
+
+### Problem Formulation <a name="navsim-baseline"></a>
+Given sensor inputs (multi-view images from 8 cameras, LiDAR, ego states, and discrete navigation commands) for a 2-second history, the end-to-end planner must output a safe trajectory for the ego vehicle to navigate along for the next 4 seconds. More information is available in the [NAVSIM docs](https://github.com/kashyap7x/navsim/blob/internal_main/docs/agents.md).
+
+### Evaluation: PDM Score <a name="navsim-eval"></a>
+Fair comparisons are challenging in the open-loop planning literature, due to metrics of narrow scope or inconsistent definitions between different projects. The PDM Score is a combination of six sub-metrics, which provides a comprehensive analysis of different aspects of driving performance. Five of these sub-metrics are discrete-valued, and one is continuous. All metrics are computed after a 4-second non-reactive simulation of the planner output: background actors follow their recorded future trajectories, and the ego vehicle moves based on an LQR controller. More information is available in the [NAVSIM docs](https://github.com/kashyap7x/navsim/blob/internal_main/docs/metrics.md).
+
+### Submission <a name="navsim-submission"></a>
+The evaluation server at [Hugging Face](https://huggingface.co/spaces/AGC2024-P/e2e-driving-2024) will be open around `late March`!
 
 ## Track: Predictive World Model <a name="worldmodel"></a>
 <div id="top" align="center">
@@ -96,14 +108,13 @@ The evaluation server at [Hugging Face](https://huggingface.co/spaces/AGC2024-P/
 > - Point of contact: [contact@opendrivelab.com](mailto:contact@opendrivelab.com)
 
 ### Description
-OpenScene is the largest 3D occupancy prediction benchmark in autonomous driving. To highlight, 
-we build it on top of [nuPlan](https://www.nuscenes.org/nuplan#challenge), covering a wide span of over 
-**120 hours** of occupancy labels collected in various cities, from `Boston`, `Pittsburgh`, `Las Vegas` to `Singapore`.
-The stats of the dataset is summarized [here](docs/dataset_stats.md).
+OpenScene is a compact redistribution of the large-scale [nuPlan](https://www.nuscenes.org/nuplan#challenge) dataset, retaining only relevant annotations and sensor data at 2Hz. This reduces the dataset size by a factor of >10. We cover a wide span of over **120 hours**, and provide additional **occupancy labels** collected in various cities, from `Boston`, `Pittsburgh`, `Las Vegas` to `Singapore`.
+
+The stats of the dataset are summarized [here](docs/dataset_stats.md).
 
 <center>
   
-|  Dataset  | Original Database |      Sensor Data (hr)    |   Flow | Semantic Category                               |
+|  Dataset  | Original Database |      Sensor Data (hr)    |   Flow | Semantic Categories                               |
 |:---------:|:-----------------:|:--------------------:|:------:|:--------------------------------------------:|
 | [MonoScene](https://github.com/astra-vision/MonoScene)  |      NYUv2 / SemanticKITTI     | 5 / 6  |  :x:     | 10 / 19   |
 | [Occ3D](https://github.com/Tsinghua-MARS-Lab/Occ3D)   |      nuScenes / Waymo    | 5.5 / 5.7 |  :x:    | 16 / 14 |

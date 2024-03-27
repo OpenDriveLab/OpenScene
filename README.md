@@ -36,7 +36,7 @@
 > - Development Kit: :ringed_planet: [NAVSIM](https://github.com/autonomousvision/navsim)
 
 - [Problem Formulation](#navsim-baseline)
-- [Evaluation: Chamfer Distance](#navsim-eval)
+- [Evaluation: PDM Score](#navsim-eval)
 - [Submission](#navsim-submission)
 
 NAVSIM gathers simulation-based metrics (such as progress and time to collision) for end-to-end driving by unrolling simplified bird's eye view abstractions of scenes for a short simulation horizon. It operates under the condition that the policy has no influence on the environment, which enables efficient, open-loop metric computation while being better aligned with closed-loop evaluations than traditional displacement errors.

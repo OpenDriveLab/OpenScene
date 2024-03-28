@@ -48,7 +48,7 @@ Given sensor inputs (multi-view images from 8 cameras, LiDAR, ego states, and di
 Fair comparisons are challenging in the open-loop planning literature, due to metrics of narrow scope or inconsistent definitions between different projects. The PDM Score is a combination of six sub-metrics, which provides a comprehensive analysis of different aspects of driving performance. Five of these sub-metrics are discrete-valued, and one is continuous. All metrics are computed after a 4-second non-reactive simulation of the planner output: background actors follow their recorded future trajectories, and the ego vehicle moves based on an LQR controller. More information is available in the [NAVSIM docs](https://github.com/kashyap7x/navsim/blob/internal_main/docs/metrics.md).
 
 ### Submission <a name="navsim-submission"></a>
-The evaluation server at [Hugging Face](https://huggingface.co/spaces/AGC2024-P/e2e-driving-2024) will be open around `late March`!
+The warm-up phase of the challenge has begun! For further details, please check the [Hugging Face](https://huggingface.co/spaces/AGC2024-P/e2e-driving-warmup) warmup server! The main [evaluation server](https://huggingface.co/spaces/AGC2024-P/e2e-driving-2024) will be open soon!
 
 ## Track: Predictive World Model <a name="worldmodel"></a>
 <div id="top" align="center">

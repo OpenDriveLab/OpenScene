@@ -58,7 +58,15 @@ Based on [nuPlan](https://www.nuscenes.org/nuplan), we provide bounding box, occ
 
 #### private test set
 
-The input data (metadata, sensors) for the private test set will be accessible upon the opening of the test server.
+| File Name  | Download Link | Size |
+| :--------: | :----------: | :--: |
+| openscene_metadata_private_test_wm.pkl | [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/main/openscene-v1.1/openscene_metadata_private_test_wm.pkl?download=true) | 26.8 MB |
+| openscene_sensor_private_test_wm.tgz | [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/main/openscene-v1.1/openscene_sensor_private_test_wm.tgz?download=true) | 15 GB |
+| openscene_metadata_private_test_e2e.pkl | Coming soon | - |
+| openscene_sensor_private_test_e2e.tgz | Coming soon | - |
+
+- `private_test_wm` is the private test set for `Predictive World Model` track.
+- `private_test_e2e` is the private test set for `End-to-End Driving at Scale` track.
 
 ### Prepare Dataset
 

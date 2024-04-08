@@ -46,7 +46,7 @@ Based on [nuPlan](https://www.nuscenes.org/nuplan), we provide bounding box, occ
 | :--------: | :----------: | :--: |
 | openscene_metadata_trainval.tgz  | [Google Drive](https://drive.google.com/drive/folders/1MnRwhnEBsgZxbaleHxc3Gw7Ovc4I9az1?usp=sharing) / [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/main/openscene-v1.1/openscene_metadata_trainval.tgz?download=true) | 6.6 GB |
 | openscene_sensor_trainval_camera | [OpenDriveLab](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1) / [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1/openscene_sensor_trainval_camera) | 1.1 TB |
-| openscene_sensor_trainval_lidar  | [OpenDriveLab](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1) [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1/openscene_sensor_trainval_lidar) | 822 GB |
+| openscene_sensor_trainval_lidar  | [OpenDriveLab](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1) / [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1/openscene_sensor_trainval_lidar) | 822 GB |
 
 #### test set
 
@@ -62,8 +62,8 @@ Based on [nuPlan](https://www.nuscenes.org/nuplan), we provide bounding box, occ
 | :--------: | :----------: | :--: |
 | openscene_metadata_private_test_wm.pkl | [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/main/openscene-v1.1/openscene_metadata_private_test_wm.pkl?download=true) | 26.8 MB |
 | openscene_sensor_private_test_wm.tgz | [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/main/openscene-v1.1/openscene_sensor_private_test_wm.tgz?download=true) | 15 GB |
-| openscene_metadata_private_test_e2e.pkl | Coming soon | - |
-| openscene_sensor_private_test_e2e.tgz | Coming soon | - |
+| openscene_metadata_private_test_e2e.tgz | [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/main/openscene-v1.1/openscene_metadata_private_test_e2e.tgz?download=true) | 4 MB |
+| openscene_sensor_private_test_e2e.tgz | [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/main/openscene-v1.1/openscene_sensor_private_test_wm.tgz?download=true) | 23.6 GB |
 
 - `private_test_wm` is the private test set for `Predictive World Model` track.
 - `private_test_e2e` is the private test set for `End-to-End Driving at Scale` track.

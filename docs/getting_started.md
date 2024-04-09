@@ -63,7 +63,7 @@ Based on [nuPlan](https://www.nuscenes.org/nuplan), we provide bounding box, occ
 | openscene_metadata_private_test_wm.tgz | [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/main/openscene-v1.1/openscene_metadata_private_test_wm.tgz?download=true) | 7.3 MB |
 | openscene_sensor_private_test_wm.tgz | [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/main/openscene-v1.1/openscene_sensor_private_test_wm.tgz?download=true) | 15 GB |
 | openscene_metadata_private_test_e2e.tgz | [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/main/openscene-v1.1/openscene_metadata_private_test_e2e.tgz?download=true) | 4 MB |
-| openscene_sensor_private_test_e2e.tgz | [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/main/openscene-v1.1/openscene_sensor_private_test_wm.tgz?download=true) | 23.6 GB |
+| openscene_sensor_private_test_e2e.tgz | [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/resolve/main/openscene-v1.1/openscene_sensor_private_test_e2e.tgz?download=true) | 23.6 GB |
 
 - `private_test_wm` is the private test set for `Predictive World Model` track.
 - `private_test_e2e` is the private test set for `End-to-End Driving at Scale` track.

@@ -48,6 +48,8 @@ Based on [nuPlan](https://www.nuscenes.org/nuplan), we provide bounding box, occ
 | openscene_sensor_trainval_camera | [OpenDriveLab](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1) / [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1/openscene_sensor_trainval_camera) | 1.1 TB |
 | openscene_sensor_trainval_lidar  | [OpenDriveLab](https://openxlab.org.cn/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1) / [Hugging Face](https://huggingface.co/datasets/OpenDriveLab/OpenScene/tree/main/openscene-v1.1/openscene_sensor_trainval_lidar) | 822 GB |
 
+:exclamation: Please note that the `openscene_sensor_trainval_camera_17.tgz` and `openscene_sensor_trainval_camera_24.tgz` in OpenDriveLab are unexpectedly corrupted.  To improve accessibility, we have divided the compressed files smaller and uploaded them to Hugging Face. You can download the `openscene_sensor_trainval_camera_{136-143, 192-199}.tgz` files from Hugging Face to replace the missing files.
+
 #### test set
 
 | File Name  | Download Link | Size |

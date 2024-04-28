@@ -119,7 +119,7 @@ Each `.pkl` file is stored in the following format：
     'ego2global_rotation':                  <list> -- Rotation matrix from ego coordinate system to global coordinate system
     'ego_dynamic_state':                    <list> -- The velocity and acceleration of ego car.
     'traffic_lights':                       <list> -- The status of traffic lights.
-    'driving_command':                      <list> -- The high-level driving command.
+    'driving_command':                      <list> -- The high-level driving command. One-hot with 4-classes: (left, forward, right, unknown).
     'cams': {
         'CAM_F0': {
             'data_path':                    <str> -- The relative address to store the camera_front_0 data.
